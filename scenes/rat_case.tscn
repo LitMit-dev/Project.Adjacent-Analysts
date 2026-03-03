@@ -1,3 +1,106 @@
-[gd_scene format=3 uid="uid://b2bv76a2dfasw"]
+[gd_scene format=4 uid="uid://b2bv76a2dfasw"]
+
+[ext_resource type="Texture2D" uid="uid://u7h31qr1lbqk" path="res://icon.svg" id="1_8dh4g"]
+[ext_resource type="PackedScene" uid="uid://c3truttpb3as" path="res://scenes/rat.tscn" id="2_52qab"]
+[ext_resource type="Texture2D" uid="uid://c32n2wn3dnbua" path="res://assets/rat_case/box2.png" id="3_52qab"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xb88"]
+texture = ExtResource("1_8dh4g")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_otbed"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_7xb88")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52qab"]
+size = Vector2(27.25, 71)
 
 [node name="RatCase" type="Node2D" unique_id=1503142259]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1543393116]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAD+/wEAAQAAAAAAAAD//wEAAQAAAAAAAAAAAAEAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAADAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAGAAEAAQAAAAAAAAAHAAEAAQAAAAAAAAD9/wEAAQAAAAAAAAD8/wEAAQAAAAAAAAD8/wAAAQAAAAAAAAD8////AQAAAAAAAAA=")
+tile_set = SubResource("TileSet_otbed")
+
+[node name="Rat" parent="." unique_id=1189129737 instance=ExtResource("2_52qab")]
+position = Vector2(-38, 18)
+
+[node name="Box" type="Sprite2D" parent="." unique_id=1008962074]
+z_index = 6
+position = Vector2(-29, -22)
+scale = Vector2(4, 4)
+texture = ExtResource("3_52qab")
+
+[node name="non_tile_collision" type="StaticBody2D" parent="." unique_id=624991357]
+
+[node name="box" type="CollisionShape2D" parent="non_tile_collision" unique_id=1238906695]
+position = Vector2(-73.5, -2.5)
+shape = SubResource("RectangleShape2D_52qab")
+
+[node name="box2" type="CollisionShape2D" parent="non_tile_collision" unique_id=2048077662]
+rotation = -0.20385194
+shape = SubResource("RectangleShape2D_52qab")

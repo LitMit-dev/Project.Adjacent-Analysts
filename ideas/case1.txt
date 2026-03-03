@@ -1,0 +1,23 @@
+5 areas
+
+1
+sewers - 2 minutes max
+-introduce movement
+-introduce click-background-obj system
+-find documents and stuff
+
+2
+street - 6 minutes max
+-walk along stone railing
+-see indoor lives
+-flowerpot stealth
+
+3
+bakery - 4 minutes max
+-avoid sweeping
+-more enviroment stealth
+
+4
+bakers home - 1 minute max
+-
+-meet priest

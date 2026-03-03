@@ -34,6 +34,10 @@ texture = SubResource("GradientTexture1D_eqwmn")
 position = Vector2(-274.5, 267)
 shape = SubResource("RectangleShape2D_8ltao")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1623286736]
+position = Vector2(-529, 96)
+shape = SubResource("RectangleShape2D_8ltao")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1229305389]
 position = Vector2(353, 266)
 shape = SubResource("RectangleShape2D_8ltao")

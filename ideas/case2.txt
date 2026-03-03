@@ -1,0 +1,24 @@
+5 areas
+
+1
+catholic church
+-start with confession
+-confess
+branch:
+	priest visits friend
+	friend gives advice *key=moremoral
+branchB:
+	priest visits abbot
+	abbot gives advice *key=morefaith
+
+converge going back to apartment
+
+2
+cafe
+
+
+3
+metpol
+
+4
+bakery

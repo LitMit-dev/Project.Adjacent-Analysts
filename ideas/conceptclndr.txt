@@ -6,8 +6,8 @@
 
 Week 1 (2-8) {
 	########Mon: decide 2d or 3d, Start basic movement for screen 9
-	Tue: design screen 1 in full, storyboard if necessary.
-	Wed: design deadline
+	Tue: design screen 1 in full, storyboard if necessary. design deadline
+	Wed: create ALL necessary art for screen 1 
 	Thu: create ALL necessary art for screen 1 
 	Fri: implement art/tilemaps necessary
 	Sat: Have a playable prototype of screen 1, 2

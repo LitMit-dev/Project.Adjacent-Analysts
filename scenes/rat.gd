@@ -37,6 +37,8 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		$Rat_Sprite.flip_h = velocity.x > 0
+		if get_real_velocity() == Vector2(0,0):
+			$Rat_Anims.play("idle")
 		if is_on_floor_only():
 			$Rat_Anims.play("run")
 	else:
