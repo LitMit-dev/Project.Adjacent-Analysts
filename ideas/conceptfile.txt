@@ -3,6 +3,8 @@ rat mechanics:
 		find scattered pages
 	-speak system:
 		each letter has a specific bfxr pitch (for fun)
+	 -or multi rat control
+	-reading learns specific songs
 
 priest mechanics:
 	-
