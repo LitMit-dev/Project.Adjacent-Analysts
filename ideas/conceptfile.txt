@@ -5,6 +5,7 @@ rat mechanics:
 		each letter has a specific bfxr pitch (for fun)
 	 -or multi rat control
 	-reading learns specific songs
-
+	-swap_song
+	
 priest mechanics:
 	-

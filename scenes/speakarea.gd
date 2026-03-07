@@ -10,9 +10,9 @@ func _process(_delta: float) -> void:
 			print("true")
 
 func enterArea(body: Node2D) -> void:
-	if body.name != "Rat": return
+	if "Rat" not in body.name: return
 	inside = true
 
 func exitArea(body: Node2D) -> void:
-	if body.name != "Rat": return
+	if "Rat" not in body.name: return
 	inside = false

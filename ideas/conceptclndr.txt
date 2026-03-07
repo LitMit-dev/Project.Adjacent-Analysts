@@ -1,5 +1,5 @@
 # A- A- RatPriest game calendar
-#Curday = 5
+#Curday = 7
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
@@ -8,8 +8,8 @@ Week 1 (2-8) {
 	########Mon: decide 2d or 3d, Start basic movement for screen 9
 	##########Tue: design screen 1 in full, storyboard if necessary. design deadline
 	##########Wed: implement speak sys
-	Thu: create ALL necessary art for screen 1 
-	Fri: create ALL necessary art for screen 1 
+	###########Thu: create ALL necessary art for screen 1 
+	###########Fri: create ALL necessary art for screen 1 
 	Sat: implement art/tilemaps necessary
 	Sun: Have a playable prototype of screen 1, 2
 }

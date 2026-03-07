@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ffaomchs73fp" path="res://assets/fonts/Jersey_10/Jersey10-Regular.ttf" id="3_acf8p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_77a1s"]
-radius = 17.0
+radius = 13.0
 height = 50.0
 
 [sub_resource type="Animation" id="Animation_nnna8"]
@@ -267,6 +267,7 @@ z_index = 5
 script = ExtResource("1_1l88y")
 
 [node name="collider0" type="CollisionShape2D" parent="." unique_id=22856481]
+position = Vector2(0, 4)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_77a1s")
 
@@ -308,7 +309,7 @@ offset_left = -78.0
 offset_top = -64.0
 offset_right = 91.0
 offset_bottom = -33.0
-placeholder_text = "LAMIER"
+placeholder_text = "_____"
 alignment = 1
 max_length = 5
 keep_editing_on_text_submit = true

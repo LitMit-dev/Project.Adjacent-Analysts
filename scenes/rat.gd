@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var rat_id = 1
 var col
 const SPEED = 340.0
 const jump_speed = -590.0
@@ -11,6 +11,8 @@ var text = "_____"
 
 func update_voice():
 	$LineEdit.text = $LineEdit.text.remove_chars(" ")
+	$LineEdit.text = $LineEdit.text.remove_chars("q")
+	$LineEdit.text = $LineEdit.text.remove_chars("Q")
 	$LineEdit.caret_column = MAX_TEXT
 	for i in range(MAX_TEXT):
 		if i >= len($LineEdit.text):
@@ -21,6 +23,8 @@ func update_voice():
 	
 
 func start_voice():
+	if !globdat.has_tape_rec or rat_id == 2:
+		return
 	$LineEdit.grab_focus()
 	$"text anim".play("LETTERS")
 	$"speak anim".play("drop")
@@ -48,7 +52,10 @@ func _input(event: InputEvent) -> void:
 		elif event.is_action_pressed("END_SONG") and isSinging:
 			end_voice()
 	
-			
+func _ready() -> void:
+	if rat_id == 2:
+		$LETTERBOX.hide()
+	
 func _process(delta: float) -> void:
 	if isSinging:
 		update_voice()
@@ -60,7 +67,6 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta):
-	
 	if velocity.y <= 0 and !jumpAvailible and is_on_floor():
 		jumpAvailible = true
 	
@@ -69,8 +75,12 @@ func _physics_process(delta):
 	elif velocity.y <= 0 and !is_on_floor():
 		$Rat_Anims.play("rise")
 	
-
 	velocity += get_gravity() * delta
+	
+	if globdat.cur_rat != rat_id:
+		$Rat_Anims.play("idle")
+		move_and_slide()
+		return
 
 	if Input.is_action_just_pressed("ui_accept") and jumpAvailible and !isSinging:
 		jump()
@@ -92,7 +102,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if is_on_floor_only():
 			$Rat_Anims.play("idle")
-
+	
 	move_and_slide()
 
 
