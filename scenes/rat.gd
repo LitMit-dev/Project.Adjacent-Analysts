@@ -23,7 +23,7 @@ func update_voice():
 	
 
 func start_voice():
-	if !globdat.has_tape_rec or rat_id == 2:
+	if !globdat.has_tape_rec or rat_id == 2 or rat_id != globdat.cur_rat:
 		return
 	$LineEdit.grab_focus()
 	$"text anim".play("LETTERS")

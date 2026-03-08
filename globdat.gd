@@ -6,4 +6,4 @@ var rat_stages = ["malic"]
 
 var cur_rat = 1
 
-var has_tape_rec = false
+var has_tape_rec = true
