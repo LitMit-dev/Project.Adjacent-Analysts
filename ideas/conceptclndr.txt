@@ -1,5 +1,5 @@
 # Adjacent Analysis RatPriest game calendar
-#Curday = 8
+#Curday = 9
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
@@ -14,9 +14,9 @@ Week 1 (2-8) {
 	###########Sun: Have a playable prototype of screen 1, 2
 }
 Week 2 (9-15) {
-	Mon: draw pipes, minim finish area 4 screen 1
+	Mon: draw pipes 
 	Tue: design/storyboard vn, study vns, create dialogue system (skip, y/n, char portraits etc.)
-	Wed: roto-boards
+	Wed: roto-boards + more like finish area 4 screen 1
 	Thu: roto-boards
 	Fri: draw storyboarded locations DEADLINE
 	Sat: Have screen 2 fully artified
