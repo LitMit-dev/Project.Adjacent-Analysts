@@ -4,8 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://u7h31qr1lbqk" path="res://icon.svg" id="1_bfpow"]
 [ext_resource type="Script" uid="uid://dryykejmkxa1w" path="res://scenes/dialogue.gd" id="1_fyky8"]
 [ext_resource type="FontFile" uid="uid://ljlhcdrrm26a" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_bfpow"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fyky8"]
+[ext_resource type="Texture2D" uid="uid://bofgqtvmbpqpd" path="res://assets/priest_case/9patch text.png" id="2_led2e"]
 
 [sub_resource type="Gradient" id="Gradient_fyky8"]
 offsets = PackedFloat32Array(1)
@@ -31,8 +30,11 @@ offset_right = 346.0
 offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = SubResource("PlaceholderTexture2D_fyky8")
-region_rect = Rect2(0, 0, 1, 1)
+texture = ExtResource("2_led2e")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
 
 [node name="Portraitmask" type="Sprite2D" parent="." unique_id=39096644]
 clip_children = 2
@@ -56,11 +58,17 @@ text = "Father Sidney"
 offset_left = 238.0
 offset_top = 438.0
 offset_right = 733.0
-offset_bottom = 622.0
+offset_bottom = 562.0
 theme_override_constants/line_separation = -11
 theme_override_fonts/normal_font = ExtResource("2_bfpow")
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
-text = "Lorem ipsum,
-I found a corpse pon yonder and far away, how i despise my fellows in our conflicts."
+text = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+scroll_active = false
 visible_characters_behavior = 1
+
+[node name="next_indic" type="Polygon2D" parent="." unique_id=1505186883]
+visible = false
+position = Vector2(-19.800018, 29.230774)
+scale = Vector2(0.7, 0.96153843)
+polygon = PackedVector2Array(684, 552, 724, 552, 704.00006, 578)
