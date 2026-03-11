@@ -1,0 +1,12 @@
+Start: start in confessional
+-chn bg to discovering mannequin 
+-chn bg talking/exdet. cafe.
+-ctsn drop tape machine in drain on way
+-chn bg apartment
+-easteregg Rat_Window
+-chn bg coldroom
+-chn bg cafe
+-chn bg see rat with tape rec saying mocha
+-tscn chase rat
+-chn bg ratbrought behind bakery
+-tscn pick up rat (put in box) and go in bakery

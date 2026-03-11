@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dwylfs0y0vpqk"]
+
+[ext_resource type="FontFile" uid="uid://ffaomchs73fp" path="res://assets/fonts/Jersey_10/Jersey10-Regular.ttf" id="1_3n4vj"]
+[ext_resource type="Texture2D" uid="uid://u7h31qr1lbqk" path="res://icon.svg" id="1_bfpow"]
+[ext_resource type="Script" uid="uid://dryykejmkxa1w" path="res://scenes/dialogue.gd" id="1_fyky8"]
+[ext_resource type="FontFile" uid="uid://ljlhcdrrm26a" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_bfpow"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fyky8"]
+
+[sub_resource type="Gradient" id="Gradient_fyky8"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_led2e"]
+gradient = SubResource("Gradient_fyky8")
+width = 156
+height = 158
+
+[node name="Dialogue" type="CanvasLayer" unique_id=1608588063]
+script = ExtResource("1_fyky8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=123708660]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -346.0
+offset_top = -208.0
+offset_right = 346.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("PlaceholderTexture2D_fyky8")
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="Portraitmask" type="Sprite2D" parent="." unique_id=39096644]
+clip_children = 2
+position = Vector2(150, 486)
+texture = SubResource("GradientTexture2D_led2e")
+
+[node name="icon" type="Sprite2D" parent="Portraitmask" unique_id=630702686]
+position = Vector2(2, -4)
+texture = ExtResource("1_bfpow")
+
+[node name="Name" type="Label" parent="." unique_id=1876831639]
+offset_left = 238.0
+offset_top = 393.0
+offset_right = 571.0
+offset_bottom = 453.0
+theme_override_fonts/font = ExtResource("1_3n4vj")
+theme_override_font_sizes/font_size = 56
+text = "Father Sidney"
+
+[node name="Text" type="RichTextLabel" parent="." unique_id=679843660]
+offset_left = 238.0
+offset_top = 438.0
+offset_right = 733.0
+offset_bottom = 622.0
+theme_override_constants/line_separation = -11
+theme_override_fonts/normal_font = ExtResource("2_bfpow")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum,
+I found a corpse pon yonder and far away, how i despise my fellows in our conflicts."
+visible_characters_behavior = 1
