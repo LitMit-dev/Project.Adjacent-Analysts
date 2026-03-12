@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://ddq6bl3hb1hob"]
 
-[node name="PriestCase" type="Node2D" unique_id=1530546836]
+[ext_resource type="Script" uid="uid://dakolxe7ie0yr" path="res://scenes/priest_case.gd" id="1_4lsck"]
+[ext_resource type="PackedScene" uid="uid://dwylfs0y0vpqk" path="res://scenes/dialogue.tscn" id="2_ej1dj"]
+[ext_resource type="PackedScene" uid="uid://ccerbhbyemjmd" path="res://scenes/animatable background.tscn" id="2_eked3"]
+
+[node name="PriestCase" type="Node2D" unique_id=1530546836 node_paths=PackedStringArray("DL")]
+script = ExtResource("1_4lsck")
+DL = NodePath("Dialogue")
+
+[node name="Animatable Background" parent="." unique_id=1750321963 instance=ExtResource("2_eked3")]
+
+[node name="Dialogue" parent="." unique_id=1608588063 instance=ExtResource("2_ej1dj")]

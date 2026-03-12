@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bofgqtvmbpqpd"
-path="res://.godot/imported/9patch text.png-4f3ccd6e5cee513056f9d793080a7ef4.ctex"
+uid="uid://daqvyiwtk3cy6"
+path="res://.godot/imported/badge02.png-8f8c8ef05d74774ce451225f184d1b47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/priest_case/9patch text.png"
-dest_files=["res://.godot/imported/9patch text.png-4f3ccd6e5cee513056f9d793080a7ef4.ctex"]
+source_file="res://assets/priest_case/badge02.png"
+dest_files=["res://.godot/imported/badge02.png-8f8c8ef05d74774ce451225f184d1b47.ctex"]
 
 [params]
 

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ccerbhbyemjmd"]
+
+[ext_resource type="Texture2D" uid="uid://du1ic2q2ig2bq" path="res://assets/rat_case/citybg1.png" id="1_cv4is"]
+
+[node name="Animatable Background" type="CanvasLayer" unique_id=1750321963]
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1397744708]
+z_index = -3
+position = Vector2(400.00003, 300.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("1_cv4is")
+
+[node name="ANIM_LAYER" type="Sprite2D" parent="." unique_id=435195616]
+z_index = -3
+position = Vector2(400.00003, 300.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("1_cv4is")
