@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjsdbrsx887t1"
+path="res://.godot/imported/Investigation! Balcony Ver. - B2.wav-ead7a2e14996ac1b24a67bfc92eb154c.sample"
+
+[deps]
+
+source_file="res://assets/rat_case/music/Investigation! Balcony Ver. - B2.wav"
+dest_files=["res://.godot/imported/Investigation! Balcony Ver. - B2.wav-ead7a2e14996ac1b24a67bfc92eb154c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

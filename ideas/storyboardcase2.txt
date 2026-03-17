@@ -1,6 +1,6 @@
 
 Priest - Father Sidney
-Detective - Detective Cain
+Detective - P.I Roman
 safezone: 800x420, still use 800x600
 
 Start: start in confessional
@@ -50,8 +50,32 @@ mov replay with humming matching bakery direction
 mov it's genius, salt bagels, no poison. just heart failure
 mov text closed for the past week though
 mov text just go in
-tscn pick up rat (put in box) and go in bakery
+tscn pick up rat and go in bakery
 
 cut, option to now play as rat or continue as priest
+
+chn bg open door
+mov text lets look around
+chn bg at desk
+mov text financial records
+chn bg at corner hallway
+mov baker asks what theyre doing here
+
+mov text det confrontation
+get OPT - .FORGIVE (IF DET POSITIVE M00D, 50/50 IF NEUTRAL) OR .ARREST:
+	.f:
+		mov anim give tape
+		mov text forgiveness text
+		chn bg dark room
+		mov text dear roman, i hope ...
+		 
+	.a:
+		anim look at P.I
+		chn bg sitting on stairs
+		mov text why 
+		mov text wanted to rejoin
+
+End
+
 
 Missing persons case -> Goes to ex-detective double partner -> go to abbot wife -> finds out wish to mail and heart probs -> find baker in cafe or smth -> turns out abbot just really liked the bagels but died of too much salt

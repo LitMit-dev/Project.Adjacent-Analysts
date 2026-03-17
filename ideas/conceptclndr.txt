@@ -20,7 +20,7 @@ Week 2 (9-15) {
 	####Thu: roto-boards
 	##Fri: break
 	#####Sat: draw storyboarded locations DEADLINE; Have screen 2 90% artified
-	Sun: Work on screen 2 mechanics
+	#######Sun: Work on screen 2 mechanics
 }
 Week 3 (16-22) {
 	Mon: Animate for screen 3
@@ -41,6 +41,6 @@ Week 4 (23-29) {
 	Sun: Have screens 6/7 or 10 done
 }
 Finaliser (30/31) {
-	Mon: Polish/Export 
+	Mon: Polish/Export YT SHORT DEADLINE (ANIMATION W MUSIC)
 	Tue: Web&EXE Export Due
 }
