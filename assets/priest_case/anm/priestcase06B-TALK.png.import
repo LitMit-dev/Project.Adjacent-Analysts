@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjhm84w6pjor2"
-path="res://.godot/imported/priestcase03b.png-945beadb7ce6c04cdb705407c1faed2c.ctex"
+uid="uid://33845ne51vug"
+path="res://.godot/imported/priestcase06B-TALK.png-d804b33d91f7cac9069573444cd1c8ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/priest_case/bgs/priestcase03b.png"
-dest_files=["res://.godot/imported/priestcase03b.png-945beadb7ce6c04cdb705407c1faed2c.ctex"]
+source_file="res://assets/priest_case/anm/priestcase06B-TALK.png"
+dest_files=["res://.godot/imported/priestcase06B-TALK.png-d804b33d91f7cac9069573444cd1c8ce.ctex"]
 
 [params]
 

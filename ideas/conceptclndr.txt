@@ -1,5 +1,5 @@
 # Adjacent Analysis RatPriest game calendar
-#Curday = 17
+#Curday = 18
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
