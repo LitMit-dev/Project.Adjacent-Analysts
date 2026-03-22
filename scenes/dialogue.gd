@@ -8,6 +8,8 @@ const letpersec = 0.03
 var choice = -1
 var is_choosing = false
 
+signal option_chosen
+
 const ninepatch_colors = {
 	blue="res://assets/priest_case/blue9patch text.png",
 	red="",
@@ -68,13 +70,51 @@ func change_multiple(text="", expression="", charName="", charId=""):
 		swap_portrait(charId, expression)
 
 
+func create_choices(a: String, b: String):
+	is_choosing = true
+	$next_indic.hide()
+	$Text.hide()
+	$Name.hide()
+	$Portraitmask.hide()
+	$icon2.hide()
+	$Choices.show()
+	$"Choices/0".text = "[Q] - [Faithful]\n" + a
+	$"Choices/1".text = "[E] - [Lawful]\n" + b
+
+func get_choice():
+	await option_chosen
+	var opt = choice
+	destroy_choices()
+	return opt
+
+func destroy_choices():
+	is_choosing = false
+	choice = -1
+	$Text.show()
+	$Name.show()
+	$Portraitmask.show()
+	$icon2.show()
+	$Choices.hide()
+	$"Choices/0".text = ""
+	$"Choices/1".text = ""
+	
+
 # Called when the node enters the scene tree for the first time.
 	
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and !no_echo:
 		no_echo = true
-		if ready_next:
+		
+		if is_choosing and event.is_action("END_SONG"):
+			choice = 0
+			option_chosen.emit()
+			
+		elif is_choosing and event.is_action("START_SONG"):
+			choice = 1
+			option_chosen.emit() 
+		
+		elif ready_next:
 			next_part()
 		elif !textEnd and !follow_along:
 			textEnd = true

@@ -1,5 +1,5 @@
 # Adjacent Analysis RatPriest game calendar
-#Curday = 21
+#Curday = 22
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
@@ -28,15 +28,15 @@ Week 3 (16-22) {
 	####Wed: Animate for screen 3 5-15
 	#########Thu: finish Animate for screen 3 5-10(pray)
 	#########Fri: finish Animate for screen 3 10-15(pray), write req dialogue in funcs
-	Sat: write req dialogue in funcs/finish off screen 3, create title screen
-	Sun: Draw badges + Have screen 3 done, start finishing s2
+	############Sat: write req dialogue in funcs/finish off screen 3, 
+	Sun: Draw badges + Have screen 3 done
 }
 Week 4 (23-29) {
 	Mon: Work on Screen 2: Finish art
 	Tue: Work on Screen 2: Implement newspapers
 	Wed: Work on Screen 2: Round off any other mechanics
 	Thu: Work on Screen 2: Implement Balcony sec ET round off
-	Fri: Work on Screen 2: Implement Balcony sec
+	Fri: Work on Screen 2: Implement Balcony sec, create title screen
 	Sat: MECHANICS, MUSIC DEADLINES, Finish off Bakery sec and others. start "marketing"
 	Sun: Have screen 2 done, create "marketing" and at least start short
 }

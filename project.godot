@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Adjacent Analysts"
-config/tags=PackedStringArray("26", "jan_mar", "unfinished")
+config/tags=PackedStringArray("26", "jam", "jan_mar", "unfinished")
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
