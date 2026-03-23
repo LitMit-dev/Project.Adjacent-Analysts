@@ -29,16 +29,16 @@ Week 3 (16-22) {
 	#########Thu: finish Animate for screen 3 5-10(pray)
 	#########Fri: finish Animate for screen 3 10-15(pray), write req dialogue in funcs
 	############Sat: write req dialogue in funcs/finish off screen 3, 
-	Sun: Draw badges + Have screen 3 done
+	########Sun: Have screen 3 done
 }
 Week 4 (23-29) {
-	Mon: Work on Screen 2: Finish art
+	Mon: Work on Screen 2: Finish art, draw S3 badges
 	Tue: Work on Screen 2: Implement newspapers
-	Wed: Work on Screen 2: Round off any other mechanics
+	Wed: Work on Screen 2: Round off any other mechanics: peer, swap, etc.
 	Thu: Work on Screen 2: Implement Balcony sec ET round off
-	Fri: Work on Screen 2: Implement Balcony sec, create title screen
+	Fri: Work on Screen 2: Implement Bakery sec, create title screen
 	Sat: MECHANICS, MUSIC DEADLINES, Finish off Bakery sec and others. start "marketing"
-	Sun: Have screen 2 done, create "marketing" and at least start short
+	Sun: Have screen 2 done , create "marketing" and at least start short, FINALISE S3 SCRIPT.
 }
 Finaliser (30/31) {
 	Mon: Polish/Export YT SHORT DEADLINE (ANIMATION W MUSIC)
