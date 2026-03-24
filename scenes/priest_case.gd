@@ -917,7 +917,7 @@ func rat_wait():
 	await DL.advance_text
 	
 	DL.swap_name("Father Sidney")
-	DL.swap_dialogue("This'll sound stupid. But when I was evacuating, I...")
+	DL.swap_dialogue("This'll sound stupid. But when I was evacuating...")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("I found people avoided me more, but the less fortunate were drawn to me.")
@@ -1028,7 +1028,11 @@ func bakery():
 	
 	DL.show()
 	DL.swap_name("Father Sidney")
-	DL.swap_dialogue("Nice Place.")
+	DL.swap_dialogue("Stay there, I don't want to make noise if he's here.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Of course.")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -1038,21 +1042,33 @@ func bakery():
 	ANBG.set_anim(ANBG.anim_index.bakery_papers, 4)
 	ANBG.loop_anim(4, 0.43)
 	DL.swap_name("Father Sidney")
-	DL.swap_dialogue("Lets see...")
+	DL.swap_dialogue("(Lets see...)")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("Huh, Financial issues. Sucks to be Mr..... Bolowit?")
+	DL.swap_dialogue("(He hasn't paid rent in a while.)")
 	DL.prog_text()
 	await DL.advance_text
-	
+DL.swap_dialogue("(Why would he do this?)")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("(A list of recipes too.)")
+	DL.prog_text()
+	await DL.advance_text)
+	DL.swap_dialogue("(Bear claws... Brownies... Cupcakes......... and Salted Bagels.)")
+	DL.prog_text()
+	await DL.advance_text 
+
+	DL.prog_text()
+	await DL.advance_text 
+
 	ANBG.end_anim()
 	await ANBG.anim_looped
 	
 	ANBG.set_anim(ANBG.anim_index.bakery_noisehear, 4)
 	ANBG.loop_anim(4, 0.43)
-	DL.swap_dialogue("SH. I heard something...")
+	DL.swap_dialogue("Roman. Over here, I heard something...")
 	DL.prog_text()
-	await DL.advance_text
+	await DL.advance_text # rustle sfx
 	
 	ANBG.end_anim()
 	await ANBG.anim_looped
