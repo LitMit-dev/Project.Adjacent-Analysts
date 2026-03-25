@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://1ycxgluwvuuv"
-path="res://.godot/imported/A Solemn Return - A5.wav-0f2081feea5e31f9a2b23761cf327c5e.sample"
+path="res://.godot/imported/A Solemn Man - A5.wav-f03c465fdc43b5f6f3998c9ec8425cba.sample"
 
 [deps]
 
-source_file="res://assets/priest_case/music/A Solemn Return - A5.wav"
-dest_files=["res://.godot/imported/A Solemn Return - A5.wav-0f2081feea5e31f9a2b23761cf327c5e.sample"]
+source_file="res://assets/priest_case/music/A Solemn Man - A5.wav"
+dest_files=["res://.godot/imported/A Solemn Man - A5.wav-f03c465fdc43b5f6f3998c9ec8425cba.sample"]
 
 [params]
 

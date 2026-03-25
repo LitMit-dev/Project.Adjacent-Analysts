@@ -1048,12 +1048,12 @@ func bakery():
 	DL.swap_dialogue("(He hasn't paid rent in a while.)")
 	DL.prog_text()
 	await DL.advance_text
-DL.swap_dialogue("(Why would he do this?)")
+	DL.swap_dialogue("(Why would he do this?)")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("(A list of recipes too.)")
 	DL.prog_text()
-	await DL.advance_text)
+	await DL.advance_text
 	DL.swap_dialogue("(Bear claws... Brownies... Cupcakes......... and Salted Bagels.)")
 	DL.prog_text()
 	await DL.advance_text 

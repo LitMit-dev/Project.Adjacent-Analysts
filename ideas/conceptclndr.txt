@@ -1,5 +1,5 @@
 # Adjacent Analysis RatPriest game calendar
-#Curday = 23
+#Curday = 24
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
@@ -32,11 +32,10 @@ Week 3 (16-22) {
 	########Sun: Have screen 3 done
 }
 Week 4 (23-29) {
-	########Mon: Work on Screen 2: Finish art, draw S3 badges
-	Tue: Work on Screen 2: Finish all  req screen 2 art, finish most of bakery.
-	Wed: Work on Screen 2: BREAK (really damn necessary ngl)
+	########Mon: Work on Screen 2: Finish art, 
+	#####Tue: Work on Screen 2: Finish all  req screen 2 art, finish most of bakery.  
+	Wed: Work on Screen 2: BREAK (really damn necessary ngl) draw S3 badges, chill
 	Thu: Work on Screen 2: Implement Balcony sec ET round off. ound off any other mechanics: peer, swap, etc. Implement newspapers.
-	
 	Fri: Work on Screen 2: Implement Bakery sec, create title screen, sfx
 	
 	Sat: MECHANICS, MUSIC DEADLINES, Finish off Bakery sec and others. start "marketing"

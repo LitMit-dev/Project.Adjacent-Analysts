@@ -53,10 +53,10 @@ func _input(event: InputEvent) -> void:
 			end_voice()
 	
 func _ready() -> void:
-	if rat_id == 2:
+	if rat_id == 2 or rat_id == 6:
 		$LETTERBOX.hide()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if isSinging:
 		update_voice()
 		for i in [0,1,2,3,4]:
