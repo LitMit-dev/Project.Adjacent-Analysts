@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://ck6svvo0j6rxa"]
 
 [node name="Main" type="Node2D" unique_id=1826898307]
+
+[node name="Button" type="Button" parent="." unique_id=41807398]
+offset_left = 119.0
+offset_top = 257.0
+offset_right = 184.0
+offset_bottom = 288.0
+text = "SIDNEY"
+
+[node name="Button2" type="Button" parent="." unique_id=1744545170]
+offset_left = 599.0
+offset_top = 257.0
+offset_right = 664.0
+offset_bottom = 288.0
+text = "RAR"

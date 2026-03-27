@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dgfy2it0x1cmw" path="res://scenes/rat.gd" id="1_1l88y"]
 [ext_resource type="Texture2D" uid="uid://csgqnhmnxduhx" path="res://assets/rat_case/rat_sprite_sheet.png" id="2_77a1s"]
 [ext_resource type="FontFile" uid="uid://ffaomchs73fp" path="res://assets/fonts/Jersey_10/Jersey10-Regular.ttf" id="3_acf8p"]
+[ext_resource type="FontFile" uid="uid://ljlhcdrrm26a" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="4_3csnj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_77a1s"]
 radius = 13.0
@@ -16,7 +17,7 @@ step = 0.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LETTERBOX/0:rotation")
+tracks/0/path = NodePath("LTR_PARENT/LETTERBOX/0:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -28,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LETTERBOX/1:rotation")
+tracks/1/path = NodePath("LTR_PARENT/LETTERBOX/1:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -40,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("LETTERBOX/2:rotation")
+tracks/2/path = NodePath("LTR_PARENT/LETTERBOX/2:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -52,7 +53,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("LETTERBOX/3:rotation")
+tracks/3/path = NodePath("LTR_PARENT/LETTERBOX/3:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -64,7 +65,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("LETTERBOX/4:rotation")
+tracks/4/path = NodePath("LTR_PARENT/LETTERBOX/4:rotation")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -91,7 +92,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("LETTERBOX:position")
+tracks/1/path = NodePath("LTR_PARENT/LETTERBOX:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -103,7 +104,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("LETTERBOX/0:rotation")
+tracks/2/path = NodePath("LTR_PARENT/LETTERBOX/0:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -115,7 +116,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("LETTERBOX/1:rotation")
+tracks/3/path = NodePath("LTR_PARENT/LETTERBOX/1:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -127,7 +128,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("LETTERBOX/2:rotation")
+tracks/4/path = NodePath("LTR_PARENT/LETTERBOX/2:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -139,7 +140,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("LETTERBOX/3:rotation")
+tracks/5/path = NodePath("LTR_PARENT/LETTERBOX/3:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -151,7 +152,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("LETTERBOX/4:rotation")
+tracks/6/path = NodePath("LTR_PARENT/LETTERBOX/4:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -167,7 +168,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("LETTERBOX:position")
+tracks/0/path = NodePath("LTR_PARENT/LETTERBOX:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -261,6 +262,8 @@ _data = {
 [sub_resource type="Theme" id="Theme_0g0h3"]
 default_font = ExtResource("3_acf8p")
 default_font_size = 38
+Label/colors/font_outline_color = Color(0, 0, 0.81960785, 0.7882353)
+Label/constants/outline_size = 7
 
 [node name="Rat" type="CharacterBody2D" unique_id=1189129737]
 z_index = 5
@@ -306,10 +309,10 @@ target_position = Vector2(0, 1)
 hit_from_inside = true
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=644038524]
-offset_left = -78.0
-offset_top = -64.0
-offset_right = 91.0
-offset_bottom = -33.0
+offset_left = -71.0
+offset_top = 678.0
+offset_right = 98.0
+offset_bottom = 709.0
 placeholder_text = "_____"
 alignment = 1
 max_length = 5
@@ -322,10 +325,12 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 flat = true
 
-[node name="LETTERBOX" type="Node2D" parent="." unique_id=1664192761]
+[node name="LTR_PARENT" type="Node2D" parent="." unique_id=264231286]
+
+[node name="LETTERBOX" type="Node2D" parent="LTR_PARENT" unique_id=1664192761]
 position = Vector2(-70, -195)
 
-[node name="0" type="Label" parent="LETTERBOX" unique_id=968449865]
+[node name="0" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=968449865]
 offset_top = 8.0
 offset_right = 24.0
 offset_bottom = 31.0
@@ -335,7 +340,7 @@ theme = SubResource("Theme_0g0h3")
 text = "_"
 horizontal_alignment = 1
 
-[node name="1" type="Label" parent="LETTERBOX" unique_id=8310365]
+[node name="1" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=8310365]
 offset_left = 28.0
 offset_top = 8.0
 offset_right = 53.0
@@ -346,7 +351,7 @@ theme = SubResource("Theme_0g0h3")
 text = "_"
 horizontal_alignment = 1
 
-[node name="2" type="Label" parent="LETTERBOX" unique_id=1129848614]
+[node name="2" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=1129848614]
 offset_left = 57.0
 offset_top = 8.0
 offset_right = 82.0
@@ -357,7 +362,7 @@ theme = SubResource("Theme_0g0h3")
 text = "_"
 horizontal_alignment = 1
 
-[node name="3" type="Label" parent="LETTERBOX" unique_id=65938730]
+[node name="3" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=65938730]
 offset_left = 86.0
 offset_top = 8.0
 offset_right = 110.0
@@ -368,7 +373,7 @@ theme = SubResource("Theme_0g0h3")
 text = "_"
 horizontal_alignment = 1
 
-[node name="4" type="Label" parent="LETTERBOX" unique_id=1881239718]
+[node name="4" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=1881239718]
 offset_left = 114.0
 offset_top = 8.0
 offset_right = 139.0
@@ -378,6 +383,27 @@ size_flags_horizontal = 3
 theme = SubResource("Theme_0g0h3")
 text = "_"
 horizontal_alignment = 1
+
+[node name="TR" type="RichTextLabel" parent="." unique_id=276385531]
+texture_filter = 2
+offset_left = -202.0
+offset_top = 88.0
+offset_right = 484.36365
+offset_bottom = 226.63635
+scale = Vector2(0.44, 0.44)
+theme_override_colors/default_color = Color(0.65834004, 0.6583399, 0.6583399, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -3
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("4_3csnj")
+theme_override_fonts/bold_font = ExtResource("3_acf8p")
+theme_override_font_sizes/normal_font_size = 43
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = " [b]Tape Recorder Controls[/b]
+ [color=#ff3344][E][/color] - Start Recording
+ [color=#ff3344][Q][/color] - Play/End Recording"
+scroll_active = false
 
 [connection signal="timeout" from="CoyoteTimer" to="." method="CoyoteEnd"]
 [connection signal="text_changed" from="LineEdit" to="." method="check_text"]

@@ -4,7 +4,7 @@ var col
 const SPEED = 340.0
 const jump_speed = -590.0
 var jumpAvailible = true
-var MAX_TEXT = 5
+var MAX_TEXT = 4
 var isSinging = false
 
 var text = "_____"
@@ -19,12 +19,14 @@ func update_voice():
 			text[i] = "_"
 		else:
 			text[i] = $LineEdit.text[i]
-		get_node("LETTERBOX/" + str(i)).text = text[i]
+		get_node("LTR_PARENT/LETTERBOX/" + str(i)).text = text[i]
 	
 
 func start_voice():
-	if !globdat.has_tape_rec or rat_id == 2 or rat_id != globdat.cur_rat:
+	if !globdat.has_tape_rec or rat_id == 2 or rat_id == 6 or rat_id != globdat.cur_rat:
+		
 		return
+	$LTR_PARENT/LETTERBOX.show()
 	$LineEdit.grab_focus()
 	$"text anim".play("LETTERS")
 	$"speak anim".play("drop")
@@ -34,8 +36,13 @@ func start_voice():
 func end_voice():
 	$LineEdit.release_focus()
 	$"speak anim".play_backwards("drop")
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(0.5).timeout
 	isSinging = false
+	await get_tree().create_timer(0.1).timeout
+	$LTR_PARENT/LETTERBOX.hide()
+	$LineEdit.text = ""
+	text = "____"
+	update_voice()
 
 func jump():
 	velocity.y = jump_speed
@@ -53,17 +60,23 @@ func _input(event: InputEvent) -> void:
 			end_voice()
 	
 func _ready() -> void:
+	$LineEdit.max_length = MAX_TEXT
+	for i in range(5):
+		if i >= MAX_TEXT:
+			get_node("LTR_PARENT/LETTERBOX/" + str(i)).hide()
+			get_node("LTR_PARENT").position.x += 17 
+			
 	if rat_id == 2 or rat_id == 6:
-		$LETTERBOX.hide()
+		$LTR_PARENT/LETTERBOX.hide()
 	
 func _process(_delta: float) -> void:
 	if isSinging:
 		update_voice()
 		for i in [0,1,2,3,4]:
 			if i == $LineEdit.caret_column:
-				get_node("LETTERBOX/" + str(i)).modulate = Color(1.0, 1.0, 0.0, 1.0)
+				get_node("LTR_PARENT/LETTERBOX/" + str(i)).modulate = Color(1.0, 1.0, 0.0, 1.0)
 			else:
-				get_node("LETTERBOX/" + str(i)).modulate = Color(1.0, 1.0, 1.0, 1.0)
+				get_node("LTR_PARENT/LETTERBOX/" + str(i)).modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 
 func _physics_process(delta):
@@ -76,6 +89,8 @@ func _physics_process(delta):
 		$Rat_Anims.play("rise")
 	
 	velocity += get_gravity() * delta
+	
+	$TR.visible = (globdat.cur_rat == rat_id and (rat_id != 2 and rat_id != 6))
 	
 	if globdat.cur_rat != rat_id:
 		$Rat_Anims.play("idle")
