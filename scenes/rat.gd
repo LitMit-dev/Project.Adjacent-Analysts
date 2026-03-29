@@ -9,7 +9,7 @@ var isSinging = false
 var MenuActive = false
 var transing = false
 var lettertrans = false
-var alert = false
+var alert = [false, ""]
 
 @export var baseZ = 5
 
@@ -74,9 +74,10 @@ func end_voice():
 	$LineEdit.release_focus()
 	$"speak anim".play_backwards("drop")
 	lettertrans = true
-	await get_tree().create_timer(0.5).timeout
-	lettertrans = false
+	await get_tree().create_timer(0.4).timeout
 	isSinging = false
+	await get_tree().create_timer(0.1).timeout
+	lettertrans = false
 	$LTR_PARENT/LETTERBOX.hide()
 	$LineEdit.text = ""
 	text = ""
@@ -121,6 +122,8 @@ func _ready() -> void:
 		$LTR_PARENT/LETTERBOX.hide()
 	
 func _process(_delta: float) -> void:
+	$POPUP.visible = alert[0]
+	$POPUP.text = alert[1]
 	if isSinging:
 		update_voice()
 		for i in [0,1,2,3,4]:

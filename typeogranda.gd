@@ -23,11 +23,16 @@ func _process(_delta: float) -> void:
 func logic():
 	if bodyLink.text.capitalize() == word.capitalize() and actionID == 0 and !bodyLink.isSinging:
 		print("AA")
-		if word == "SWAP_":
+		if word == "SWAP":
 			globdat.cur_rat = additional_links[0]
 		inside = false
 		if word == "MOCHA":
 			get_node(additional_links[0]).monitoring = true
+		if word == "19621":
+			get_node(additional_links[0]).frame = 1
+			get_node(additional_links[1]).disabled = !get_node(additional_links[1]).disabled
+			get_node(additional_links[2]).monitoring = false
+			
 			
 	elif actionID == 1:
 		get_node(additional_links[0]).frame = 1

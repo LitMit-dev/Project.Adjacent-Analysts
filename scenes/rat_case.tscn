@@ -24,6 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://582opnvqwu33" path="res://assets/rat_case/AC.PNG" id="21_kxhra"]
 [ext_resource type="PackedScene" uid="uid://dwylfs0y0vpqk" path="res://scenes/dialogue.tscn" id="22_txnx6"]
 [ext_resource type="Texture2D" uid="uid://b6bxi4epwevox" path="res://assets/rat_case/TAPEREC.PNG" id="23_gdbgu"]
+[ext_resource type="Script" uid="uid://c55l6mypm1ud0" path="res://scenes/general_pop_up.gd" id="25_s6fgj"]
+[ext_resource type="Texture2D" uid="uid://cubjdkl63ldkr" path="res://assets/rat_case/Safe.png" id="26_7uwgd"]
+[ext_resource type="Texture2D" uid="uid://su3bsgrnnmy6" path="res://assets/rat_case/safemask.png" id="27_qt5k2"]
+[ext_resource type="Texture2D" uid="uid://bgbarlbtj461k" path="res://assets/rat_case/brokehalfsafe.png" id="28_62ubf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7xb88"]
 texture = ExtResource("1_8dh4g")
@@ -290,8 +294,8 @@ sources/2 = SubResource("TileSetAtlasSource_otbed")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_52qab"]
 size = Vector2(8, 71)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh1nj"]
-size = Vector2(83.5, 105.25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt5k2"]
+size = Vector2(82, 186)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74pgo"]
 size = Vector2(26, 189.625)
@@ -379,6 +383,18 @@ rotation = 0.34906584
 scale = Vector2(1.482, 1.788)
 texture = ExtResource("18_f8q2k")
 
+[node name="Sprite2D3" type="Sprite2D" parent="Hints" unique_id=2143635898]
+position = Vector2(1610.6233, 74.62091)
+rotation = -0.7421674
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("17_fxgqy")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Hints" unique_id=913274715]
+position = Vector2(1606.2767, 70.01789)
+rotation = -0.39310157
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("18_f8q2k")
+
 [node name="Box2" type="Sprite2D" parent="." unique_id=1973731529]
 position = Vector2(1385, 4507)
 scale = Vector2(3, 3)
@@ -430,7 +446,7 @@ tile_set = SubResource("TileSet_otbed")
 
 [node name="Base2" type="TileMapLayer" parent="." unique_id=8338937]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAACAPn/AgABAAEAAAACAPj/AgABAAEAAAACAPf/AgABAAEAAAAPAAEAAgADAAAAAAAQAAEAAgAEAAAAAAAOAAEAAgACAAAAAAD9/wEAAgACAAAAAAD+/wEAAgADAAAAAAD//wEAAgADAAAAAAAAAAEAAgADAAAAAAABAAEAAgAEAAAAAAACAPb/AgABAAEAAAACAPX/AgABAAEAAAACAPT/AgABAAEAAAACAPP/AgABAAEAAAAaAAEAAgACAAAAAAAbAAEAAgAEAAAAAAD3/ykAAgAIAAEAAAD3/yoAAgAIAAEAAAD3/ysAAgAIAAEAAAD3/ywAAgAIAAEAAAD3/y0AAgAIAAEAAAD3/y4AAgAIAAEAAAD3/y8AAgAIAAEAAAD3/zAAAgAIAAEAAAD3/zEAAgAIAAEAAAD3/zIAAgAIAAEAAAD3/zMAAgAIAAEAAAD3/zQAAgAIAAEAAAD3/zUAAgAIAAEAAAD7/18AAgAIAAIAAAD9/18AAgAIAAIAABAEAF8AAgAIAAIAAAASAFoAAgAHAAMAAAAkAAUAAgABAAgAAFAkAAYAAgACAAgAAFAjAAUAAgABAAkAAFAjAAYAAgACAAkAAFAiAAUAAgABAAkAAFAiAAYAAgACAAkAAFAhAAUAAgABAAkAAFAhAAYAAgACAAkAAFAgAAUAAgABAAkAAFAgAAYAAgACAAkAAFAfAAUAAgABAAkAAFAfAAYAAgACAAkAAFAeAAUAAgABAAkAAFAeAAYAAgACAAkAAFAdAAUAAgABAAkAAFAdAAYAAgACAAkAAFAcAAUAAgABAAkAAFAcAAYAAgACAAkAAFAbAAUAAgABAAoAAFAbAAYAAgACAAoAAFAkAAkAAgACAAAAAAAlAAkAAgADAAAAAAAmAAkAAgADAAAAAAAnAAkAAgAEAAAAAAAuAAMAAgACAAkAAEAvAAMAAgABAAoAAGAuAAIAAgABAAkAAEAvAAIAAgACAAoAAGAoAAcAAgAAAAgAAGApAAcAAgAAAAkAAGAqAAcAAgAAAAkAAGArAAcAAgAAAAoAAGBEAP3/AgABAAAAAABFAP3/AgABAAAAAABDAP3/AgABAAAAAABaACoAAgAIAAEAAABaADUAAgAIAAEAAAD7/zUAAgACAAAAAAD8/zUAAgAEAAAAAAD6/zQAAgAHAAoAAAD6/zMAAgAHAAoAAAD6/zIAAgAHAAoAAAD6/zEAAgAGAAoAAAD6/y0AAgAHAAoAAAD6/y4AAgAHAAoAAAD6/y8AAgAHAAoAAAD6/zAAAgAHAAoAAAD6/ywAAgAHAAoAAADv/zIAAgAIAAEAAADv/zEAAgAIAAEAAAD+/zEAAgADAAQAAAD+/zIAAgADAAUAAAD+/zMAAgADAAYAAAD+/zQAAgADAAcAAAD//zEAAgAEAAQAAAD//zIAAgAEAAUAAAD//zMAAgAEAAYAAAD//zQAAgAEAAcAAAAAADEAAgAFAAQAAAAAADIAAgAFAAUAAAAAADMAAgAFAAYAAAAAADQAAgAFAAcAAAAGADEAAgADAAQAAAAGADIAAgADAAUAAAAGADMAAgADAAYAAAAGADQAAgADAAcAAAAHADEAAgAEAAQAAAAHADIAAgAEAAUAAAAHADMAAgAEAAYAAAAHADQAAgAEAAcAAAAIADEAAgAFAAQAAAAIADIAAgAFAAUAAAAIADMAAgAFAAYAAAAIADQAAgAFAAcAAAARADEAAgAAAAQAAAARADIAAgAAAAUAAAARADMAAgAAAAYAAAARADQAAgAAAAcAAAASADEAAgABAAQAAAASADIAAgABAAUAAAASADMAAgABAAYAAAASADQAAgABAAcAAAATADEAAgACAAQAAAATADIAAgACAAUAAAATADMAAgACAAYAAAATADQAAgACAAcAAAAcADEAAgADAAQAAAAcADIAAgADAAUAAAAcADMAAgADAAYAAAAcADQAAgADAAcAAAAdADEAAgAEAAQAAAAdADIAAgAEAAUAAAAdADMAAgAEAAYAAAAdADQAAgAEAAcAAAAeADEAAgAFAAQAAAAeADIAAgAFAAUAAAAeADMAAgAFAAYAAAAeADQAAgAFAAcAAAApADEAAgAAAAQAAAApADIAAgAAAAUAAAApADMAAgAAAAYAAAApADQAAgAAAAcAAAAqADEAAgABAAQAAAAqADIAAgABAAUAAAAqADMAAgABAAYAAAAqADQAAgABAAcAAAArADEAAgACAAQAAAArADIAAgACAAUAAAArADMAAgACAAYAAAArADQAAgACAAcAAAD+/ysAAgAAAAQAAAD+/ywAAgAAAAUAAAD+/y0AAgAAAAYAAAD+/y4AAgAAAAcAAAD//ysAAgABAAQAAAD//ywAAgABAAUAAAD//y0AAgABAAYAAAD//y4AAgABAAcAAAAAACsAAgACAAQAAAAAACwAAgACAAUAAAAAAC0AAgACAAYAAAAAAC4AAgACAAcAAAAGACsAAgADAAQAAAAGACwAAgADAAUAAAAGAC0AAgADAAYAAAAGAC4AAgADAAcAAAAHACsAAgAEAAQAAAAHACwAAgAEAAUAAAAHAC0AAgAEAAYAAAAHAC4AAgAEAAcAAAAIACsAAgAFAAQAAAAIACwAAgAFAAUAAAAIAC0AAgAFAAYAAAAIAC4AAgAFAAcAAAARACsAAgADAAQAAAARACwAAgADAAUAAAARAC0AAgADAAYAAAARAC4AAgADAAcAAAASACsAAgAEAAQAAAASACwAAgAEAAUAAAASAC0AAgAEAAYAAAASAC4AAgAEAAcAAAATACsAAgAFAAQAAAATACwAAgAFAAUAAAATAC0AAgAFAAYAAAATAC4AAgAFAAcAAAAcACsAAgADAAQAAAAcACwAAgADAAUAAAAcAC0AAgADAAYAAAAcAC4AAgADAAcAAAAdACsAAgAEAAQAAAAdACwAAgAEAAUAAAAdAC0AAgAEAAYAAAAdAC4AAgAEAAcAAAAeACsAAgAFAAQAAAAeACwAAgAFAAUAAAAeAC0AAgAFAAYAAAAeAC4AAgAFAAcAAAApACsAAgAAAAQAAAApACwAAgAAAAUAAAApAC0AAgAAAAYAAAApAC4AAgAAAAcAAAAqACsAAgABAAQAAAAqACwAAgABAAUAAAAqAC0AAgABAAYAAAAqAC4AAgABAAcAAAArACsAAgACAAQAAAArACwAAgACAAUAAAArAC0AAgACAAYAAAArAC4AAgACAAcAAAA2ACsAAgAAAAQAAAA2ACwAAgAAAAUAAAA2AC0AAgAAAAYAAAA2AC4AAgAAAAcAAAA3ACsAAgABAAQAAAA3ACwAAgABAAUAAAA3AC0AAgABAAYAAAA3AC4AAgABAAcAAAA4ACsAAgACAAQAAAA4ACwAAgACAAUAAAA4AC0AAgACAAYAAAA4AC4AAgACAAcAAAA=")
+tile_map_data = PackedByteArray("AAACAPn/AgABAAEAAAACAPj/AgABAAEAAAACAPf/AgABAAEAAAAPAAEAAgADAAAAAAAQAAEAAgAEAAAAAAAOAAEAAgACAAAAAAD9/wEAAgACAAAAAAD+/wEAAgADAAAAAAD//wEAAgADAAAAAAAAAAEAAgADAAAAAAABAAEAAgAEAAAAAAACAPb/AgABAAEAAAACAPX/AgABAAEAAAACAPT/AgABAAEAAAACAPP/AgABAAEAAAAaAAEAAgACAAAAAAAbAAEAAgAEAAAAAAD3/ykAAgAIAAEAAAD3/yoAAgAIAAEAAAD3/ysAAgAIAAEAAAD3/ywAAgAIAAEAAAD3/y0AAgAIAAEAAAD3/y4AAgAIAAEAAAD3/y8AAgAIAAEAAAD3/zAAAgAIAAEAAAD3/zEAAgAIAAEAAAD3/zIAAgAIAAEAAAD3/zMAAgAIAAEAAAD3/zQAAgAIAAEAAAD3/zUAAgAIAAEAAAD7/18AAgAIAAIAAAD9/18AAgAIAAIAABAEAF8AAgAIAAIAAAASAFoAAgAHAAMAAAAkAAUAAgABAAgAAFAkAAYAAgACAAgAAFAjAAUAAgABAAkAAFAjAAYAAgACAAkAAFAiAAUAAgABAAkAAFAiAAYAAgACAAkAAFAhAAUAAgABAAkAAFAhAAYAAgACAAkAAFAgAAUAAgABAAkAAFAgAAYAAgACAAkAAFAfAAUAAgABAAkAAFAfAAYAAgACAAkAAFAeAAUAAgABAAkAAFAeAAYAAgACAAkAAFAdAAUAAgABAAkAAFAdAAYAAgACAAkAAFAcAAUAAgABAAkAAFAcAAYAAgACAAkAAFAbAAUAAgABAAoAAFAbAAYAAgACAAoAAFAkAAkAAgACAAAAAAAlAAkAAgADAAAAAAAmAAkAAgADAAAAAAAnAAkAAgAEAAAAAAAuAAMAAgACAAkAAEAvAAMAAgABAAoAAGAuAAIAAgABAAkAAEAvAAIAAgACAAoAAGAoAAcAAgAAAAgAAGApAAcAAgAAAAkAAGAqAAcAAgAAAAkAAGArAAcAAgAAAAoAAGBEAP3/AgABAAAAAABFAP3/AgABAAAAAABDAP3/AgABAAAAAABaACoAAgAIAAEAAABaADUAAgAIAAEAAAD7/zUAAgACAAAAAAD8/zUAAgAEAAAAAAD6/zQAAgAHAAoAAAD6/zMAAgAHAAoAAAD6/zIAAgAHAAoAAAD6/zEAAgAGAAoAAAD6/y0AAgAHAAoAAAD6/y4AAgAHAAoAAAD6/y8AAgAHAAoAAAD6/zAAAgAHAAoAAAD6/ywAAgAHAAoAAADv/zIAAgAIAAEAAADv/zEAAgAIAAEAAAD+/zEAAgADAAQAAAD+/zIAAgADAAUAAAD+/zMAAgADAAYAAAD+/zQAAgADAAcAAAD//zEAAgAEAAQAAAD//zIAAgAEAAUAAAD//zMAAgAEAAYAAAD//zQAAgAEAAcAAAAAADEAAgAFAAQAAAAAADIAAgAFAAUAAAAAADMAAgAFAAYAAAAAADQAAgAFAAcAAAAGADEAAgADAAQAAAAGADIAAgADAAUAAAAGADMAAgADAAYAAAAGADQAAgADAAcAAAAHADEAAgAEAAQAAAAHADIAAgAEAAUAAAAHADMAAgAEAAYAAAAHADQAAgAEAAcAAAAIADEAAgAFAAQAAAAIADIAAgAFAAUAAAAIADMAAgAFAAYAAAAIADQAAgAFAAcAAAARADEAAgAAAAQAAAARADIAAgAAAAUAAAARADMAAgAAAAYAAAARADQAAgAAAAcAAAASADEAAgABAAQAAAASADIAAgABAAUAAAASADMAAgABAAYAAAASADQAAgABAAcAAAATADEAAgACAAQAAAATADIAAgACAAUAAAATADMAAgACAAYAAAATADQAAgACAAcAAAAcADEAAgADAAQAAAAcADIAAgADAAUAAAAcADMAAgADAAYAAAAcADQAAgADAAcAAAAdADEAAgAEAAQAAAAdADIAAgAEAAUAAAAdADMAAgAEAAYAAAAdADQAAgAEAAcAAAAeADEAAgAFAAQAAAAeADIAAgAFAAUAAAAeADMAAgAFAAYAAAAeADQAAgAFAAcAAAD+/ysAAgAAAAQAAAD+/ywAAgAAAAUAAAD+/y0AAgAAAAYAAAD+/y4AAgAAAAcAAAD//ysAAgABAAQAAAD//ywAAgABAAUAAAD//y0AAgABAAYAAAD//y4AAgABAAcAAAAAACsAAgACAAQAAAAAACwAAgACAAUAAAAAAC0AAgACAAYAAAAAAC4AAgACAAcAAAAGACsAAgADAAQAAAAGACwAAgADAAUAAAAGAC0AAgADAAYAAAAGAC4AAgADAAcAAAAHACsAAgAEAAQAAAAHACwAAgAEAAUAAAAHAC0AAgAEAAYAAAAHAC4AAgAEAAcAAAAIACsAAgAFAAQAAAAIACwAAgAFAAUAAAAIAC0AAgAFAAYAAAAIAC4AAgAFAAcAAAARACsAAgADAAQAAAARACwAAgADAAUAAAARAC0AAgADAAYAAAARAC4AAgADAAcAAAASACsAAgAEAAQAAAASACwAAgAEAAUAAAASAC0AAgAEAAYAAAASAC4AAgAEAAcAAAATACsAAgAFAAQAAAATACwAAgAFAAUAAAATAC0AAgAFAAYAAAATAC4AAgAFAAcAAAAcACsAAgADAAQAAAAcACwAAgADAAUAAAAcAC0AAgADAAYAAAAcAC4AAgADAAcAAAAdACsAAgAEAAQAAAAdACwAAgAEAAUAAAAdAC0AAgAEAAYAAAAdAC4AAgAEAAcAAAAeACsAAgAFAAQAAAAeACwAAgAFAAUAAAAeAC0AAgAFAAYAAAAeAC4AAgAFAAcAAAApACsAAgAAAAQAAAApACwAAgAAAAUAAAApAC0AAgAAAAYAAAApAC4AAgAAAAcAAAAqACsAAgABAAQAAAAqACwAAgABAAUAAAAqAC0AAgABAAYAAAAqAC4AAgABAAcAAAArACsAAgACAAQAAAArACwAAgACAAUAAAArAC0AAgACAAYAAAArAC4AAgACAAcAAAA2ACsAAgAAAAQAAAA2ACwAAgAAAAUAAAA2AC0AAgAAAAYAAAA2AC4AAgAAAAcAAAA3ACsAAgABAAQAAAA3ACwAAgABAAUAAAA3AC0AAgABAAYAAAA3AC4AAgABAAcAAAA4ACsAAgACAAQAAAA4ACwAAgACAAUAAAA4AC0AAgACAAYAAAA4AC4AAgACAAcAAAAmADEAAgAAAAQAAAAmADIAAgAAAAUAAAAmADMAAgAAAAYAAAAmADQAAgAAAAcAAAAnADEAAgABAAQAAAAnADIAAgABAAUAAAAnADMAAgABAAYAAAAnADQAAgABAAcAAAAoADEAAgACAAQAAAAoADIAAgACAAUAAAAoADMAAgACAAYAAAAoADQAAgACAAcAAAAUADQAAgAGAAcAAAAVADQAAgAHAAcAAAAWADQAAgAHAAYAAAA=")
 tile_set = SubResource("TileSet_otbed")
 
 [node name="Box3" type="Sprite2D" parent="." unique_id=1959117362]
@@ -451,7 +467,7 @@ position = Vector2(1744, 110)
 rat_id = 2
 
 [node name="Rat3" parent="." unique_id=1972997276 instance=ExtResource("2_52qab")]
-position = Vector2(1608, 1588)
+position = Vector2(697, 1680)
 rat_id = 3
 MAX_TEXT = 5
 
@@ -495,8 +511,8 @@ position = Vector2(-76.5, -2.5)
 shape = SubResource("RectangleShape2D_52qab")
 
 [node name="Plantpot" type="CollisionShape2D" parent="non_tile_collision" unique_id=1475842933]
-position = Vector2(526, 1649)
-shape = SubResource("RectangleShape2D_wh1nj")
+position = Vector2(524, 1607)
+shape = SubResource("RectangleShape2D_qt5k2")
 
 [node name="wineglass" type="CollisionShape2D" parent="non_tile_collision" unique_id=1529005745]
 position = Vector2(1204, 1603.8125)
@@ -858,6 +874,7 @@ flip_h = true
 vframes = 8
 
 [node name="Newspaper" type="Area2D" parent="Newspapers" unique_id=1296360618 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(144, 33)
 script = ExtResource("20_7o785")
 bodyLink = NodePath("../../Rat1")
 
@@ -869,14 +886,15 @@ shape = SubResource("RectangleShape2D_otbed")
 
 [node name="Talk" parent="interact" unique_id=506953749 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(1747, -19)
-word = "SWAP_"
+word = "SWAP"
 bodyLink = NodePath("../../Rat1")
 additional_links = [2]
 
 [node name="Talk2" parent="interact" unique_id=959701914 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(698, 1679)
-word = "FAITH"
+word = "19621"
 bodyLink = NodePath("../../Rat3")
+additional_links = [NodePath("../../Safe"), NodePath("../../non_tile_collision/Plantpot"), NodePath(".")]
 
 [node name="Talk3" parent="interact" unique_id=1601821989 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(1383, 1679)
@@ -891,19 +909,23 @@ additional_links = [NodePath("../TRANSFER_AREA3")]
 
 [node name="Talk5" parent="interact" unique_id=355664873 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(1456, 4542)
-word = "SWAP_"
+word = "SWAP"
 bodyLink = NodePath("../../Rat5")
 additional_links = [6]
 
 [node name="End_Puzzle" parent="interact" unique_id=1468119302 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(2099, 437)
 rotation = 1.5707964
+scale = Vector2(1, 3.98)
+monitoring = false
 actionID = 1
 bodyLink = NodePath("../../Rat2")
 additional_links = [NodePath("../../Box4"), NodePath("../../non_tile_collision/sink2"), 1, NodePath("../Talk")]
 
 [node name="End_Puzzle2" parent="interact" unique_id=1848268109 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(1667, 4532)
+scale = Vector2(1.515, 1.515)
+monitoring = false
 actionID = 1
 bodyLink = NodePath("../../Rat6")
 additional_links = [NodePath("../../Box2"), NodePath("../../non_tile_collision/sink1"), 5, NodePath("../Talk5")]
@@ -916,6 +938,7 @@ additional_links = [3, NodePath("../../Rat3"), 0]
 
 [node name="TRANSFER_AREA2" parent="interact" unique_id=147167427 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(1779, 1664)
+monitoring = false
 actionID = 2
 bodyLink = NodePath("../../Rat3")
 additional_links = [4, NodePath("../../Rat4"), 1]
@@ -930,6 +953,7 @@ additional_links = [5, NodePath("../../Rat5"), 2]
 
 [node name="TRANSFER_AREA4" parent="interact" unique_id=345402910 node_paths=PackedStringArray("bodyLink") instance=ExtResource("15_74pgo")]
 position = Vector2(376, 4287)
+monitoring = false
 actionID = 2
 bodyLink = NodePath("../../Rat5")
 additional_links = [&"res://scenes/main.tscn", NodePath("../../Rat5"), 3]
@@ -958,7 +982,149 @@ position = Vector2(858, 20)
 scale = Vector2(2, 2)
 texture = ExtResource("23_gdbgu")
 
+[node name="Pop-ups" type="Node2D" parent="." unique_id=1650327996]
+
+[node name="general_pop_up" type="Area2D" parent="Pop-ups" unique_id=46432207 node_paths=PackedStringArray("bodyLink", "trapLink")]
+position = Vector2(2094, 434)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][F][/color] Pull Lever"
+bodyLink = NodePath("../../Rat2")
+action = "squeak"
+trapLink = NodePath("../../interact/End_Puzzle")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/general_pop_up" unique_id=347116043]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="general_pop_up2" type="Area2D" parent="Pop-ups" unique_id=1334746777 node_paths=PackedStringArray("bodyLink", "trapLink")]
+position = Vector2(1663, 4521)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][F][/color] Turn Off Water"
+bodyLink = NodePath("../../Rat6")
+action = "squeak"
+trapLink = NodePath("../../interact/End_Puzzle2")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/general_pop_up2" unique_id=1471300550]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="general_pop_up3" type="Area2D" parent="Pop-ups" unique_id=1286937831 node_paths=PackedStringArray("bodyLink", "trapLink")]
+position = Vector2(378, 4286)
+scale = Vector2(0.635, 0.635)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][F][/color] Pick Up"
+bodyLink = NodePath("../../Rat5")
+action = "squeak"
+trapLink = NodePath("../../interact/TRANSFER_AREA4")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/general_pop_up3" unique_id=546849316]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="general_pop_up4" type="Area2D" parent="Pop-ups" unique_id=63912785 node_paths=PackedStringArray("bodyLink", "trapLink")]
+position = Vector2(1782.0001, 1673.0002)
+scale = Vector2(0.635, 0.635)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][F][/color] Enter Air Vent"
+bodyLink = NodePath("../../Rat3")
+action = "squeak"
+trapLink = NodePath("../../interact/TRANSFER_AREA2")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/general_pop_up4" unique_id=725772128]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="talk_popup" type="Area2D" parent="Pop-ups" unique_id=226249446 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(1747, -19)
+scale = Vector2(0.685, 0.685)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][E][/color] Talk"
+bodyLink = NodePath("../../Rat1")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup" unique_id=1566139369]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="talk_popup2" type="Area2D" parent="Pop-ups" unique_id=1327346706 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(695, 1678)
+scale = Vector2(0.685, 0.685)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][E][/color] Guess Code"
+bodyLink = NodePath("../../Rat3")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup2" unique_id=1511509723]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="talk_popup3" type="Area2D" parent="Pop-ups" unique_id=425463342 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(1382, 1677.9999)
+scale = Vector2(0.685, 0.685)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][E][/color] Talk"
+bodyLink = NodePath("../../Rat3")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup3" unique_id=1605411181]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="talk_popup4" type="Area2D" parent="Pop-ups" unique_id=1422524757 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(1054, 3046)
+scale = Vector2(0.685, 0.685)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][E][/color] Talk"
+bodyLink = NodePath("../../Rat4")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup4" unique_id=1502182010]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="talk_popup5" type="Area2D" parent="Pop-ups" unique_id=357337826 node_paths=PackedStringArray("bodyLink")]
+position = Vector2(1456, 4540)
+scale = Vector2(0.685, 0.685)
+script = ExtResource("25_s6fgj")
+text = "[color=#ff0000][E][/color] Talk"
+bodyLink = NodePath("../../Rat5")
+
+[node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup5" unique_id=2103704922]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Safe" type="Sprite2D" parent="." unique_id=1856162199]
+position = Vector2(796.00006, 1618)
+scale = Vector2(5.085, 5.085)
+texture = ExtResource("26_7uwgd")
+hframes = 2
+
+[node name="Safemask" type="Sprite2D" parent="." unique_id=2069324780]
+z_index = 6
+position = Vector2(803.67, 1618)
+scale = Vector2(5.085, 5.085)
+texture = ExtResource("27_qt5k2")
+
+[node name="Brokehalfsafe" type="Sprite2D" parent="." unique_id=1302408402]
+position = Vector2(892.00006, 1651.0001)
+scale = Vector2(3, 3)
+texture = ExtResource("28_62ubf")
+
 [connection signal="body_entered" from="pickup tape" to="pickup tape" method="enterArea"]
 [connection signal="body_exited" from="pickup tape" to="pickup tape" method="exitArea"]
 [connection signal="body_entered" from="Newspapers/Newspaper" to="Newspapers/Newspaper" method="enterArea"]
 [connection signal="body_exited" from="Newspapers/Newspaper" to="Newspapers/Newspaper" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/general_pop_up" to="Pop-ups/general_pop_up" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/general_pop_up" to="Pop-ups/general_pop_up" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/general_pop_up2" to="Pop-ups/general_pop_up2" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/general_pop_up2" to="Pop-ups/general_pop_up2" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/general_pop_up3" to="Pop-ups/general_pop_up3" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/general_pop_up3" to="Pop-ups/general_pop_up3" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/general_pop_up4" to="Pop-ups/general_pop_up4" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/general_pop_up4" to="Pop-ups/general_pop_up4" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/talk_popup" to="Pop-ups/talk_popup" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/talk_popup" to="Pop-ups/talk_popup" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/talk_popup2" to="Pop-ups/talk_popup2" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/talk_popup2" to="Pop-ups/talk_popup2" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/talk_popup3" to="Pop-ups/talk_popup3" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/talk_popup3" to="Pop-ups/talk_popup3" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/talk_popup4" to="Pop-ups/talk_popup4" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/talk_popup4" to="Pop-ups/talk_popup4" method="exitArea"]
+[connection signal="body_entered" from="Pop-ups/talk_popup5" to="Pop-ups/talk_popup5" method="enterArea"]
+[connection signal="body_exited" from="Pop-ups/talk_popup5" to="Pop-ups/talk_popup5" method="exitArea"]

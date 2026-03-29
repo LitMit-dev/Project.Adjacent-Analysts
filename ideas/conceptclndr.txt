@@ -39,7 +39,7 @@ Week 4 (23-29) {
 	#######Fri: Work on Screen 2: Implement Bakery sec, create title screen, ,  any other mechanics: peer, swap, etc. 
 	
 	#######Sat: Finish off Bakery sec and others: MECHANICS,   
-	Sun: Have screen 2 done , Implement newspapers. draw S3 badges, sfx, MUSIC DEADLINES, HINTS!!!!!!
+	Sun: Have screen 2 done , Implement newspapers. HINTS!!!!!! draw S3 badges, sfx, MUSIC DEADLINES, 
 }
 Finaliser (30/31) {
 	Mon: MARKETING, start short, FINALISE S3 SCRIPT. Polish/
