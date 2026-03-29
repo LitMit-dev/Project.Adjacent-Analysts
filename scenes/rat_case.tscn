@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://c3truttpb3as" path="res://scenes/rat.tscn" id="2_52qab"]
 [ext_resource type="Texture2D" uid="uid://c32n2wn3dnbua" path="res://assets/rat_case/box2.png" id="3_52qab"]
 [ext_resource type="Texture2D" uid="uid://dmb4bwq1lvuer" path="res://assets/rat_case/sewer bg blurred.png" id="5_otbed"]
+[ext_resource type="Texture2D" uid="uid://4s1flp2h4sk8" path="res://assets/rat_case/mochahint.png" id="6_nagdn"]
 [ext_resource type="Texture2D" uid="uid://clultgf728iad" path="res://assets/rat_case/Sink.png" id="6_odkyc"]
 [ext_resource type="Texture2D" uid="uid://bdc7xap2g8nu8" path="res://assets/rat_case/key.png" id="6_ud4vl"]
 [ext_resource type="Texture2D" uid="uid://du1ic2q2ig2bq" path="res://assets/rat_case/citybg1.png" id="7_8ss87"]
 [ext_resource type="Texture2D" uid="uid://fg2urih6mdpa" path="res://assets/rat_case/switch.png" id="7_50e6g"]
+[ext_resource type="Texture2D" uid="uid://h8b0xh52wjxf" path="res://assets/rat_case/up.png" id="7_l4nyt"]
 [ext_resource type="Texture2D" uid="uid://deya2m2n6acv1" path="res://assets/rat_case/Plantpot-sheet.png" id="8_6vv8t"]
 [ext_resource type="Texture2D" uid="uid://cq7s48hwfaxiy" path="res://assets/rat_case/cafebg.png" id="8_mrgc0"]
 [ext_resource type="Texture2D" uid="uid://b7mgwquqf75x2" path="res://assets/rat_case/bakerybg.png" id="9_g7r3s"]
@@ -340,6 +342,9 @@ width = 56
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otbed"]
 size = Vector2(118, 77)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4nyt"]
+size = Vector2(70, 37)
+
 [node name="RatCase" type="Node2D" unique_id=1503142259 node_paths=PackedStringArray("DL")]
 script = ExtResource("1_pudnd")
 DL = NodePath("Dialogue")
@@ -398,6 +403,37 @@ position = Vector2(1606.2767, 70.01789)
 rotation = -0.39310157
 scale = Vector2(1.482, 1.788)
 texture = ExtResource("18_f8q2k")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Hints" unique_id=279111609]
+modulate = Color(0.41568628, 1, 1, 1)
+z_index = 1
+position = Vector2(1183.6233, 3023.6206)
+rotation = -0.03383863
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("17_fxgqy")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Hints" unique_id=1235956450]
+z_index = 1
+position = Vector2(1181, 3025)
+rotation = 0.3152272
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("6_nagdn")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Hints" unique_id=1176389213]
+modulate = Color(0.41568628, 1, 1, 1)
+z_index = 1
+position = Vector2(-315.9999, 3079)
+rotation = 0.5797576
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("17_fxgqy")
+flip_h = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="Hints" unique_id=1697744103]
+z_index = 1
+position = Vector2(-316, 3079)
+rotation = 0.19373155
+scale = Vector2(1.482, 1.788)
+texture = ExtResource("7_l4nyt")
 
 [node name="Box2" type="Sprite2D" parent="." unique_id=1973731529]
 position = Vector2(1385, 4507)
@@ -660,7 +696,8 @@ bodyLink = NodePath("../Taperec")
 position = Vector2(865, -10.5)
 shape = SubResource("RectangleShape2D_otbed")
 
-[node name="debug" type="Node" parent="." unique_id=400298303]
+[node name="debug" type="Node2D" parent="." unique_id=2065062647]
+visible = false
 
 [node name="Label" type="Label" parent="debug" unique_id=1959933326]
 z_index = 1
@@ -839,6 +876,7 @@ scale = Vector2(5, 5)
 texture = ExtResource("12_fwq03")
 
 [node name="Sprite2D9" type="Sprite2D" parent="Newspapers" unique_id=95137081]
+modulate = Color(1, 0.4509804, 0.3882353, 1)
 position = Vector2(1025, 1734.0001)
 scale = Vector2(5, 5)
 texture = ExtResource("12_fwq03")
@@ -859,6 +897,7 @@ texture = ExtResource("12_fwq03")
 vframes = 8
 
 [node name="Sprite2D4" type="Sprite2D" parent="Newspapers" unique_id=2119665524]
+modulate = Color(1, 0.45199758, 0.38750875, 1)
 position = Vector2(1984.0001, -4)
 scale = Vector2(5, 5)
 texture = ExtResource("12_fwq03")
@@ -884,19 +923,141 @@ texture = ExtResource("12_fwq03")
 flip_h = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="Newspapers" unique_id=1858407654]
-position = Vector2(2207, 382)
+position = Vector2(2207, 380)
 scale = Vector2(4, 4)
 texture = ExtResource("12_fwq03")
 flip_h = true
 vframes = 8
 
 [node name="Newspaper" type="Area2D" parent="Newspapers" unique_id=1296360618 node_paths=PackedStringArray("bodyLink")]
-position = Vector2(144, 33)
+process_mode = 3
+position = Vector2(1001, 33)
 script = ExtResource("20_7o785")
+Nodrach_Type = "News"
+Issue = "Issue #621 - 03.02.04"
+text = "City Hall!
+"
+color = Color(0.89411765, 0.8745098, 0.8745098, 1)
 bodyLink = NodePath("../../Rat1")
 
 [node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper" unique_id=689367443]
-position = Vector2(865, -10.5)
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Newspaper2" type="Area2D" parent="Newspapers" unique_id=1549277504 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(1076, 276)
+script = ExtResource("20_7o785")
+Nodrach_Type = "News"
+Issue = "Issue #322 - 12.25.99"
+text = "City Hall!
+"
+color = Color(0.89411765, 0.8745098, 0.8745098, 1)
+bodyLink = NodePath("../../Rat1")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper2" unique_id=293606900]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Newspaper3" type="Area2D" parent="Newspapers" unique_id=1655919035 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(2226, 404)
+script = ExtResource("20_7o785")
+Nodrach_Type = "News"
+Issue = "Page 12 - Volume 4"
+text = "City Hall!
+"
+color = Color(1, 1, 1, 1)
+bodyLink = NodePath("../../Rat2")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper3" unique_id=448340684]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Newspaper4" type="Area2D" parent="Newspapers" unique_id=1587178719 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(942, 3140)
+script = ExtResource("20_7o785")
+Nodrach_Type = "News"
+Issue = "Page 12 - Volume 4"
+text = "City Hall!
+"
+color = Color(1, 1, 1, 1)
+bodyLink = NodePath("../../Rat2")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper4" unique_id=1032333380]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Newspaper5" type="Area2D" parent="Newspapers" unique_id=1292716574 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(2073, 4349)
+script = ExtResource("20_7o785")
+Nodrach_Type = "News"
+Issue = "Page 12 - Volume 4"
+text = "City Hall!
+"
+color = Color(1, 1, 1, 1)
+bodyLink = NodePath("../../Rat2")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper5" unique_id=935230840]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Music" type="Area2D" parent="Newspapers" unique_id=1614420297 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(1578, -37)
+script = ExtResource("20_7o785")
+Nodrach_Type = "Music"
+Issue = "Number 19 - October"
+text = "SWAP!
+This band 'round the Muso-sphere found its roots in Sandstone in '92
+Most famously, SWAP sold portable speakers to connect cassettes to.
+Want to play music loud enough for everyone can hear you? Shout it! SWAP!"
+color = Color(5.0055983e-06, 0.7433952, 0.74339503, 1)
+bodyLink = NodePath("../../Rat1")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Music" unique_id=1829623623]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="Music2" type="Area2D" parent="Newspapers" unique_id=437570767 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(340, 3037)
+script = ExtResource("20_7o785")
+Nodrach_Type = "Music"
+Issue = "Number 19 - October"
+text = "SWAP!
+This band 'round the Muso-sphere found its roots in Sandstone in '92
+Most famously, SWAP sold portable speakers to connect cassettes to.
+Want to play music loud enough for everyone can hear you? Shout it! SWAP!"
+color = Color(5.0055983e-06, 0.7433952, 0.74339503, 1)
+bodyLink = NodePath("../../Rat1")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Music2" unique_id=924065751]
+position = Vector2(-5, 12.5)
+shape = SubResource("RectangleShape2D_l4nyt")
+
+[node name="History" type="Area2D" parent="Newspapers" unique_id=1356048103 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(1979, -37)
+script = ExtResource("20_7o785")
+Nodrach_Type = "History"
+Issue = "Page 12 - Volume 4"
+text = "City Hall!
+"
+color = Color(1, 0.4509804, 0.3882353, 1)
+bodyLink = NodePath("../../Rat1")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/History" unique_id=1002378737]
+shape = SubResource("RectangleShape2D_otbed")
+
+[node name="History2" type="Area2D" parent="Newspapers" unique_id=1282856657 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(1024, 1685)
+script = ExtResource("20_7o785")
+Nodrach_Type = "History"
+Issue = "Page 27 - Volume 4"
+text = "City Hall!
+"
+color = Color(1, 0.4509804, 0.3882353, 1)
+bodyLink = NodePath("../../Rat3")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/History2" unique_id=57773946]
 shape = SubResource("RectangleShape2D_otbed")
 
 [node name="interact" type="Node2D" parent="." unique_id=1705868004]
@@ -1314,6 +1475,22 @@ texture = ExtResource("28_62ubf")
 [connection signal="body_exited" from="pickup tape" to="pickup tape" method="exitArea"]
 [connection signal="body_entered" from="Newspapers/Newspaper" to="Newspapers/Newspaper" method="enterArea"]
 [connection signal="body_exited" from="Newspapers/Newspaper" to="Newspapers/Newspaper" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Newspaper2" to="Newspapers/Newspaper2" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Newspaper2" to="Newspapers/Newspaper2" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Newspaper3" to="Newspapers/Newspaper3" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Newspaper3" to="Newspapers/Newspaper3" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Newspaper4" to="Newspapers/Newspaper4" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Newspaper4" to="Newspapers/Newspaper4" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Newspaper5" to="Newspapers/Newspaper5" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Newspaper5" to="Newspapers/Newspaper5" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Music" to="Newspapers/Music" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Music" to="Newspapers/Music" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Music2" to="Newspapers/Music2" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Music2" to="Newspapers/Music2" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/History" to="Newspapers/History" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/History" to="Newspapers/History" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/History2" to="Newspapers/History2" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/History2" to="Newspapers/History2" method="exitArea"]
 [connection signal="body_entered" from="Pop-ups/general_pop_up" to="Pop-ups/general_pop_up" method="enterArea"]
 [connection signal="body_exited" from="Pop-ups/general_pop_up" to="Pop-ups/general_pop_up" method="exitArea"]
 [connection signal="body_entered" from="Pop-ups/general_pop_up2" to="Pop-ups/general_pop_up2" method="enterArea"]

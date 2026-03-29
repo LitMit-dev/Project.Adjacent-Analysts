@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 globdat="*uid://ckomqyxxn6x1a"
+NPP="*uid://btxsodai5w88d"
 
 [display]
 

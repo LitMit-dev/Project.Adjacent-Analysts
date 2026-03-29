@@ -431,11 +431,10 @@ target_position = Vector2(0, 1)
 hit_from_inside = true
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=644038524]
-offset_left = -84.0
-offset_top = -108.0
-offset_right = 85.0
-offset_bottom = -77.0
-placeholder_text = "_____"
+offset_left = 1928.0
+offset_top = -3704.0
+offset_right = 2097.0
+offset_bottom = -3673.0
 alignment = 1
 max_length = 5
 keep_editing_on_text_submit = true
@@ -508,7 +507,6 @@ text = "_"
 horizontal_alignment = 1
 
 [node name="POPUP" type="RichTextLabel" parent="." unique_id=1499824123]
-visible = false
 z_index = 50
 texture_filter = 2
 offset_left = -199.0
@@ -525,7 +523,7 @@ theme_override_fonts/bold_font = ExtResource("3_acf8p")
 theme_override_font_sizes/normal_font_size = 43
 theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
-text = " [color=#ff0000][R][/color] READ"
+text = "[color=#ff0000][R][/color] READ"
 scroll_active = false
 horizontal_alignment = 1
 

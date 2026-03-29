@@ -45,7 +45,7 @@ func _ready() -> void:
 	DL.not_active = true
 	DL.ratify()
 	DL.hide()
-	globdat.cur_rat = 3
+	globdat.cur_rat = 1
 	globdat.has_tape_rec = true
 
 

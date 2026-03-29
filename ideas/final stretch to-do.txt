@@ -19,15 +19,15 @@ To do:
 	-Final Music wavs
 	
 -MISC INGAME:
+	-Implement SFX and Music Singleton
 	-Main Menu:
 		-BUTTONS
 		-BG_CLIPISH THING?
 
 -MISC OTHER:
-	-Implement SFX and Music Singleton
-	-YT short
 	-Marketing on Itch
 	-Marketing - General
+	-YT short
 
 Complete:
 -Peer Backgrounds
