@@ -32,13 +32,20 @@ func logic():
 			get_node(additional_links[0]).frame = 1
 			get_node(additional_links[1]).disabled = !get_node(additional_links[1]).disabled
 			get_node(additional_links[2]).monitoring = false
-			
+		if word == "DAISY":
+			get_node(additional_links[1]).disabled = !get_node(additional_links[1]).disabled
+			get_node(additional_links[2]).monitoring = false
+			for i in range(6):
+				await get_tree().create_timer(0.3).timeout
+				get_node(additional_links[0]).frame += 1
+		active = false
 			
 	elif actionID == 1:
 		get_node(additional_links[0]).frame = 1
 		get_node(additional_links[1]).disabled = !get_node(additional_links[1]).disabled
 		globdat.cur_rat = additional_links[2]
 		inside = false
+		active = false
 		get_node(additional_links[3]).monitoring = false
 	elif actionID == 2:
 		inside = false
@@ -50,6 +57,7 @@ func logic():
 		get_node(additional_links[1]).smooth_in()
 		bodyLink.menu_close()
 		bodyLink.end_voice()
+		active = false
 		if additional_links[0] is int:
 			globdat.cur_rat = additional_links[0]
 		else:

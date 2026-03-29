@@ -11,6 +11,15 @@ var transing = false
 var lettertrans = false
 var alert = [false, ""]
 
+const menuify = {
+	
+	HINTS_OFF="[color=#FF0000](DISABLED)[/color]",
+	HINTS_ON="[color=#00FF00](ENABLED)[/color]",
+	MUSIC_OFF="[color=#FF0000](OFF)[/color]",
+	MUSIC_ON="[color=#00FF00](ON)[/color]"
+	
+}
+
 @export var baseZ = 5
 
 var text = "_____"
@@ -100,9 +109,9 @@ func _input(event: InputEvent) -> void:
 		elif event.is_action_pressed("END_SONG") and isSinging:
 			end_voice()
 		elif event.is_action_pressed("hints") and MenuActive:
-			globdat.settings.HINTS = globdat.settings.HINTS 
+			globdat.settings.HINTS = !globdat.settings.HINTS 
 		elif event.is_action_pressed("musictog") and MenuActive:
-			globdat.settings.MUSIC = globdat.settings.MUSIC
+			globdat.settings.MUSIC = !globdat.settings.MUSIC
 		elif event.is_action_pressed("exit") and MenuActive:
 			get_tree().call_deferred("change_scene_to_file", "res://scenes/main.tscn")
 		elif event.is_action_pressed("menutog") and !MenuActive and !isSinging:
@@ -111,6 +120,7 @@ func _input(event: InputEvent) -> void:
 			menu_close()
 			
 func _ready() -> void:
+	$menu/TR.text = "[b]MENU[/b]\n[H] - BACKGROUND HINTS " + [menuify.HINTS_OFF, menuify.HINTS_ON][int(globdat.settings.HINTS)] + "\n[T] - TOGGLE MUSIC " + [menuify.MUSIC_OFF, menuify.MUSIC_ON][int(globdat.settings.MUSIC)] + "\n[ESC] - QUIT TO MAIN MENU\n[color=#FF4444](PROGRESS IS NOT SAVED)[/color]"
 	
 	$LineEdit.max_length = MAX_TEXT
 	for i in range(5):
@@ -122,6 +132,9 @@ func _ready() -> void:
 		$LTR_PARENT/LETTERBOX.hide()
 	
 func _process(_delta: float) -> void:
+	if MenuActive:
+		$menu/TR.text = "[b]MENU[/b]\n[H] - BACKGROUND HINTS " + [menuify.HINTS_OFF, menuify.HINTS_ON][int(globdat.settings.HINTS)] + "\n[T] - TOGGLE MUSIC " + [menuify.MUSIC_OFF, menuify.MUSIC_ON][int(globdat.settings.MUSIC)] + "\n[ESC] - QUIT TO MAIN MENU\n[color=#FF4444](PROGRESS IS NOT SAVED)[/color]"
+	
 	$POPUP.visible = alert[0]
 	$POPUP.text = alert[1]
 	if isSinging:

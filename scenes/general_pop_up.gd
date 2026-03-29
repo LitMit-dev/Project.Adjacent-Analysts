@@ -9,7 +9,7 @@ var inside = false
 @export var text: String = ""
 @export var bodyLink: CharacterBody2D
 @export var action: String
-@export var trapLink: Area2D
+@export var trapLink: Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -22,7 +22,12 @@ func logic():
 		exitArea(bodyLink)
 	if action == "" or trapLink == null:
 		return
+	
 	if Input.is_action_just_pressed(action):
+		if ID == 2:
+			get_tree().paused = !get_tree().paused 
+			trapLink.visible = !trapLink.visible 
+			return
 		trapLink.monitoring = true
 	
 	

@@ -1,0 +1,34 @@
+################################################################
+
+To do:
+
+-SCREEN 2:
+	-Peer Backgrounds##############################
+	-Change Menu text on key########################
+	
+	-Newspaper BGS
+	-Newspaper Text
+	-Hints
+	-SFX wavs
+	-Final Music wavs
+
+-SCREEN 3:
+	-Badges
+	-Final Script
+	-SFX wavs
+	-Final Music wavs
+	
+-MISC INGAME:
+	-Main Menu:
+		-BUTTONS
+		-BG_CLIPISH THING?
+
+-MISC OTHER:
+	-Implement SFX and Music Singleton
+	-YT short
+	-Marketing on Itch
+	-Marketing - General
+
+Complete:
+-Peer Backgrounds
+-Change Menu text on key

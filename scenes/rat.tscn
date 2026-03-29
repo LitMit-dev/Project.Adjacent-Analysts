@@ -450,6 +450,7 @@ flat = true
 [node name="LTR_PARENT" type="Node2D" parent="." unique_id=264231286]
 
 [node name="LETTERBOX" type="Node2D" parent="LTR_PARENT" unique_id=1664192761]
+z_index = 1
 position = Vector2(-70, -195)
 
 [node name="0" type="Label" parent="LTR_PARENT/LETTERBOX" unique_id=968449865]
