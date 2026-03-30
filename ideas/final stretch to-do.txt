@@ -1,28 +1,33 @@
 ################################################################
 
+#start history ft saint kaiel
+
 To do:
 
 -SCREEN 2:
 	-Peer Backgrounds##############################
 	-Change Menu text on key########################
+	-Newspaper BGS####################
+	-Hints###############
 	
-	-Newspaper BGS
 	-Newspaper Text
-	-Hints
+	
 	-SFX wavs
 	-Final Music wavs
 
 -SCREEN 3:
 	-Badges
 	-Final Script
+	
 	-SFX wavs
 	-Final Music wavs
 	
 -MISC INGAME:
-	-Implement SFX and Music Singleton
 	-Main Menu:
 		-BUTTONS
 		-BG_CLIPISH THING?
+		
+	-Implement SFX and Music Singleton
 
 -MISC OTHER:
 	-Marketing on Itch
@@ -32,3 +37,5 @@ To do:
 Complete:
 -Peer Backgrounds
 -Change Menu text on key
+-Newspaper BGS
+-Hints

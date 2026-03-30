@@ -24,6 +24,9 @@ func logic():
 		return
 	
 	if Input.is_action_just_pressed(action):
+		if name == "general_pop_up2":
+			exitArea(bodyLink)
+			queue_free()
 		if ID == 2:
 			get_tree().paused = !get_tree().paused 
 			trapLink.visible = !trapLink.visible 

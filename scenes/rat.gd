@@ -27,11 +27,13 @@ var text = "_____"
 func smooth_out():
 	z_index = 99
 	transing = true
+	MSC.fade_in()
 	$Transitor.play("fade_in")
 	
 
 func smooth_in():
 	z_index = baseZ
+	MSC.fade_out()
 	$Transitor.play_backwards("fade_in")
 	transing = false
 

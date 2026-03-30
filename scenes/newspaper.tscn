@@ -163,6 +163,7 @@ scale = Vector2(11, 11)
 texture = ExtResource("2_ktsvs")
 
 [node name="News" type="Node2D" parent="." unique_id=1479900857]
+visible = false
 position = Vector2(-185, -43)
 scale = Vector2(1.5, 1.5)
 
@@ -179,8 +180,6 @@ theme_override_fonts/bold_font = ExtResource("3_0ko4l")
 theme_override_font_sizes/normal_font_size = 21
 theme_override_font_sizes/bold_font_size = 26
 bbcode_enabled = true
-text = "[b]Daniel Heathman[/b] 
-some might say a different perspective is bad"
 
 [node name="Logo" type="RichTextLabel" parent="News" unique_id=1374473644]
 offset_left = 243.0
@@ -262,7 +261,6 @@ theme_override_fonts/bold_font = ExtResource("3_0ko4l")
 theme_override_font_sizes/normal_font_size = 21
 theme_override_font_sizes/bold_font_size = 26
 bbcode_enabled = true
-text = "Some might say toooooooooooooooooooooooooooo good"
 
 [node name="Title" type="RichTextLabel" parent="Music" unique_id=1044335793]
 offset_left = 249.0

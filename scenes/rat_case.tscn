@@ -408,14 +408,14 @@ texture = ExtResource("18_f8q2k")
 modulate = Color(0.41568628, 1, 1, 1)
 z_index = 1
 position = Vector2(1183.6233, 3023.6206)
-rotation = -0.03383863
+rotation = -0.5420408
 scale = Vector2(1.482, 1.788)
 texture = ExtResource("17_fxgqy")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Hints" unique_id=1235956450]
 z_index = 1
 position = Vector2(1181, 3025)
-rotation = 0.3152272
+rotation = -0.19297498
 scale = Vector2(1.482, 1.788)
 texture = ExtResource("6_nagdn")
 
@@ -486,7 +486,7 @@ tile_set = SubResource("TileSet_otbed")
 
 [node name="Base2" type="TileMapLayer" parent="." unique_id=8338937]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAACAPn/AgABAAEAAAACAPj/AgABAAEAAAACAPf/AgABAAEAAAAPAAEAAgADAAAAAAAQAAEAAgAEAAAAAAAOAAEAAgACAAAAAAD9/wEAAgACAAAAAAD+/wEAAgADAAAAAAD//wEAAgADAAAAAAAAAAEAAgADAAAAAAABAAEAAgAEAAAAAAACAPb/AgABAAEAAAACAPX/AgABAAEAAAACAPT/AgABAAEAAAACAPP/AgABAAEAAAAaAAEAAgACAAAAAAAbAAEAAgAEAAAAAAD3/ykAAgAIAAEAAAD3/yoAAgAIAAEAAAD3/ysAAgAIAAEAAAD3/ywAAgAIAAEAAAD3/y0AAgAIAAEAAAD3/y4AAgAIAAEAAAD3/y8AAgAIAAEAAAD3/zAAAgAIAAEAAAD3/zEAAgAIAAEAAAD3/zIAAgAIAAEAAAD3/zMAAgAIAAEAAAD3/zQAAgAIAAEAAAD3/zUAAgAIAAEAAAD7/18AAgAIAAIAAAD9/18AAgAIAAIAABAEAF8AAgAIAAIAAAASAFoAAgAHAAMAAAAkAAUAAgABAAgAAFAkAAYAAgACAAgAAFAjAAUAAgABAAkAAFAjAAYAAgACAAkAAFAiAAUAAgABAAkAAFAiAAYAAgACAAkAAFAhAAUAAgABAAkAAFAhAAYAAgACAAkAAFAgAAUAAgABAAkAAFAgAAYAAgACAAkAAFAfAAUAAgABAAkAAFAfAAYAAgACAAkAAFAeAAUAAgABAAkAAFAeAAYAAgACAAkAAFAdAAUAAgABAAkAAFAdAAYAAgACAAkAAFAcAAUAAgABAAkAAFAcAAYAAgACAAkAAFAbAAUAAgABAAoAAFAbAAYAAgACAAoAAFAkAAkAAgACAAAAAAAlAAkAAgADAAAAAAAmAAkAAgADAAAAAAAnAAkAAgAEAAAAAAAuAAMAAgACAAkAAEAvAAMAAgABAAoAAGAuAAIAAgABAAkAAEAvAAIAAgACAAoAAGAoAAcAAgAAAAgAAGApAAcAAgAAAAkAAGAqAAcAAgAAAAkAAGArAAcAAgAAAAoAAGBEAP3/AgABAAAAAABFAP3/AgABAAAAAABDAP3/AgABAAAAAABaACoAAgAIAAEAAABaADUAAgAIAAEAAAD7/zUAAgACAAAAAAD8/zUAAgAEAAAAAAD6/zQAAgAHAAoAAAD6/zMAAgAHAAoAAAD6/zIAAgAHAAoAAAD6/zEAAgAGAAoAAAD6/y0AAgAHAAoAAAD6/y4AAgAHAAoAAAD6/y8AAgAHAAoAAAD6/zAAAgAHAAoAAAD6/ywAAgAHAAoAAADv/zIAAgAIAAEAAADv/zEAAgAIAAEAAAD+/zEAAgADAAQAAAD+/zIAAgADAAUAAAD+/zMAAgADAAYAAAD+/zQAAgADAAcAAAD//zEAAgAEAAQAAAD//zIAAgAEAAUAAAD//zMAAgAEAAYAAAD//zQAAgAEAAcAAAAAADEAAgAFAAQAAAAAADIAAgAFAAUAAAAAADMAAgAFAAYAAAAAADQAAgAFAAcAAAAGADEAAgADAAQAAAAGADIAAgADAAUAAAAGADMAAgADAAYAAAAGADQAAgADAAcAAAAHADEAAgAEAAQAAAAHADIAAgAEAAUAAAAHADMAAgAEAAYAAAAHADQAAgAEAAcAAAAIADEAAgAFAAQAAAAIADIAAgAFAAUAAAAIADMAAgAFAAYAAAAIADQAAgAFAAcAAAAcADEAAgADAAQAAAAcADIAAgADAAUAAAAcADMAAgADAAYAAAAcADQAAgADAAcAAAAdADEAAgAEAAQAAAAdADIAAgAEAAUAAAAdADMAAgAEAAYAAAAdADQAAgAEAAcAAAAeADEAAgAFAAQAAAAeADIAAgAFAAUAAAAeADMAAgAFAAYAAAAeADQAAgAFAAcAAAD+/ysAAgAAAAQAAAD+/ywAAgAAAAUAAAD+/y0AAgAAAAYAAAD+/y4AAgAAAAcAAAD//ysAAgABAAQAAAD//ywAAgABAAUAAAD//y0AAgABAAYAAAD//y4AAgABAAcAAAAAACsAAgACAAQAAAAAACwAAgACAAUAAAAAAC0AAgACAAYAAAAAAC4AAgACAAcAAAAGACsAAgADAAQAAAAGACwAAgADAAUAAAAGAC0AAgADAAYAAAAGAC4AAgADAAcAAAAHACsAAgAEAAQAAAAHACwAAgAEAAUAAAAHAC0AAgAEAAYAAAAHAC4AAgAEAAcAAAAIACsAAgAFAAQAAAAIACwAAgAFAAUAAAAIAC0AAgAFAAYAAAAIAC4AAgAFAAcAAAARACsAAgADAAQAAAARACwAAgADAAUAAAARAC0AAgADAAYAAAARAC4AAgADAAcAAAASACsAAgAEAAQAAAASACwAAgAEAAUAAAASAC0AAgAEAAYAAAASAC4AAgAEAAcAAAATACsAAgAFAAQAAAATACwAAgAFAAUAAAATAC0AAgAFAAYAAAATAC4AAgAFAAcAAAAcACsAAgADAAQAAAAcACwAAgADAAUAAAAcAC0AAgADAAYAAAAcAC4AAgADAAcAAAAdACsAAgAEAAQAAAAdACwAAgAEAAUAAAAdAC0AAgAEAAYAAAAdAC4AAgAEAAcAAAAeACsAAgAFAAQAAAAeACwAAgAFAAUAAAAeAC0AAgAFAAYAAAAeAC4AAgAFAAcAAAA2ACsAAgAAAAQAAAA2ACwAAgAAAAUAAAA2AC0AAgAAAAYAAAA2AC4AAgAAAAcAAAA3ACsAAgABAAQAAAA3ACwAAgABAAUAAAA3AC0AAgABAAYAAAA3AC4AAgABAAcAAAA4ACsAAgACAAQAAAA4ACwAAgACAAUAAAA4AC0AAgACAAYAAAA4AC4AAgACAAcAAAAUADQAAgAGAAcAAAAVADQAAgAHAAcAAAAWADQAAgAHAAYAAAAOADEAAgAAAAQAAAAOADIAAgAAAAUAAAAOADMAAgAAAAYAAAAPADEAAgABAAQAAAAPADIAAgABAAUAAAAPADMAAgABAAYAAAAQADEAAgACAAQAAAAQADIAAgACAAUAAAAQADMAAgACAAYAAAAOADQAAgAAAAcAAAAPADQAAgABAAcAAAAQADQAAgACAAcAAAAsACsAAgAAAAQAAAAsACwAAgAAAAUAAAAsAC0AAgAAAAYAAAAsAC4AAgAAAAcAAAAtACsAAgABAAQAAAAtACwAAgABAAUAAAAtAC0AAgABAAYAAAAtAC4AAgABAAcAAAAvACsAAgACAAQAAAAvACwAAgACAAUAAAAvAC0AAgACAAYAAAAvAC4AAgACAAcAAAAuACsAAgABAAQAAAAuACwAAgABAAUAAAAuAC0AAgABAAYAAAAuAC4AAgABAAcAAAAkADEAAgAAAAQAAAAkADIAAgAAAAUAAAAkADMAAgAAAAYAAAAkADQAAgAAAAcAAAAlADEAAgABAAQAAAAlADIAAgABAAUAAAAlADMAAgABAAYAAAAlADQAAgABAAcAAAAmADEAAgACAAQAAAAmADIAAgACAAUAAAAmADMAAgACAAYAAAAmADQAAgACAAcAAAA=")
+tile_map_data = PackedByteArray("AAACAPn/AgABAAEAAAACAPj/AgABAAEAAAACAPf/AgABAAEAAAAPAAEAAgADAAAAAAAQAAEAAgAEAAAAAAAOAAEAAgACAAAAAAD9/wEAAgACAAAAAAD+/wEAAgADAAAAAAD//wEAAgADAAAAAAAAAAEAAgADAAAAAAABAAEAAgAEAAAAAAACAPb/AgABAAEAAAACAPX/AgABAAEAAAACAPT/AgABAAEAAAACAPP/AgABAAEAAAAaAAEAAgACAAAAAAAbAAEAAgAEAAAAAAD3/ykAAgAIAAEAAAD3/yoAAgAIAAEAAAD3/ysAAgAIAAEAAAD3/ywAAgAIAAEAAAD3/y0AAgAIAAEAAAD3/y4AAgAIAAEAAAD3/y8AAgAIAAEAAAD3/zAAAgAIAAEAAAD3/zEAAgAIAAEAAAD3/zIAAgAIAAEAAAD3/zMAAgAIAAEAAAD3/zQAAgAIAAEAAAD3/zUAAgAIAAEAAAD7/18AAgAIAAIAAAD9/18AAgAIAAIAABAEAF8AAgAIAAIAAAASAFoAAgAHAAMAAAAkAAUAAgABAAgAAFAkAAYAAgACAAgAAFAjAAUAAgABAAkAAFAjAAYAAgACAAkAAFAiAAUAAgABAAkAAFAiAAYAAgACAAkAAFAhAAUAAgABAAkAAFAhAAYAAgACAAkAAFAgAAUAAgABAAkAAFAgAAYAAgACAAkAAFAfAAUAAgABAAkAAFAfAAYAAgACAAkAAFAeAAUAAgABAAkAAFAeAAYAAgACAAkAAFAdAAUAAgABAAkAAFAdAAYAAgACAAkAAFAcAAUAAgABAAkAAFAcAAYAAgACAAkAAFAbAAUAAgABAAoAAFAbAAYAAgACAAoAAFAkAAkAAgACAAAAAAAlAAkAAgADAAAAAAAmAAkAAgADAAAAAAAnAAkAAgAEAAAAAAAuAAMAAgACAAkAAEAvAAMAAgABAAoAAGAuAAIAAgABAAkAAEAvAAIAAgACAAoAAGAoAAcAAgAAAAgAAGApAAcAAgAAAAkAAGAqAAcAAgAAAAkAAGArAAcAAgAAAAoAAGBEAP3/AgABAAAAAABFAP3/AgABAAAAAABDAP3/AgABAAAAAABaACoAAgAIAAEAAABaADUAAgAIAAEAAAD7/zUAAgACAAAAAAD8/zUAAgAEAAAAAAD6/zQAAgAHAAoAAAD6/zMAAgAHAAoAAAD6/zIAAgAHAAoAAAD6/zEAAgAGAAoAAAD6/y0AAgAHAAoAAAD6/y4AAgAHAAoAAAD6/y8AAgAHAAoAAAD6/zAAAgAHAAoAAAD6/ywAAgAHAAoAAADv/zIAAgAIAAEAAADv/zEAAgAIAAEAAAD+/zEAAgADAAQAAAD+/zIAAgADAAUAAAD+/zMAAgADAAYAAAD+/zQAAgADAAcAAAD//zEAAgAEAAQAAAD//zIAAgAEAAUAAAD//zMAAgAEAAYAAAD//zQAAgAEAAcAAAAAADEAAgAFAAQAAAAAADIAAgAFAAUAAAAAADMAAgAFAAYAAAAAADQAAgAFAAcAAAAGADEAAgADAAQAAAAGADIAAgADAAUAAAAGADMAAgADAAYAAAAGADQAAgADAAcAAAAHADEAAgAEAAQAAAAHADIAAgAEAAUAAAAHADMAAgAEAAYAAAAHADQAAgAEAAcAAAAIADEAAgAFAAQAAAAIADIAAgAFAAUAAAAIADMAAgAFAAYAAAAIADQAAgAFAAcAAAAcADEAAgADAAQAAAAcADIAAgADAAUAAAAcADMAAgADAAYAAAAcADQAAgADAAcAAAAdADEAAgAEAAQAAAAdADIAAgAEAAUAAAAdADMAAgAEAAYAAAAdADQAAgAEAAcAAAAeADEAAgAFAAQAAAAeADIAAgAFAAUAAAAeADMAAgAFAAYAAAAeADQAAgAFAAcAAAD+/ysAAgAAAAQAAAD+/ywAAgAAAAUAAAD+/y0AAgAAAAYAAAD+/y4AAgAAAAcAAAD//ysAAgABAAQAAAD//ywAAgABAAUAAAD//y0AAgABAAYAAAD//y4AAgABAAcAAAAAACsAAgACAAQAAAAAACwAAgACAAUAAAAAAC0AAgACAAYAAAAAAC4AAgACAAcAAAAGACsAAgADAAQAAAAGACwAAgADAAUAAAAGAC0AAgADAAYAAAAGAC4AAgADAAcAAAAHACsAAgAEAAQAAAAHACwAAgAEAAUAAAAHAC0AAgAEAAYAAAAHAC4AAgAEAAcAAAAIACsAAgAFAAQAAAAIACwAAgAFAAUAAAAIAC0AAgAFAAYAAAAIAC4AAgAFAAcAAAARACsAAgADAAQAAAARACwAAgADAAUAAAARAC0AAgADAAYAAAARAC4AAgADAAcAAAASACsAAgAEAAQAAAASACwAAgAEAAUAAAASAC0AAgAEAAYAAAASAC4AAgAEAAcAAAATACsAAgAFAAQAAAATACwAAgAFAAUAAAATAC0AAgAFAAYAAAATAC4AAgAFAAcAAAAcACsAAgADAAQAAAAcACwAAgADAAUAAAAcAC0AAgADAAYAAAAcAC4AAgADAAcAAAAdACsAAgAEAAQAAAAdACwAAgAEAAUAAAAdAC0AAgAEAAYAAAAdAC4AAgAEAAcAAAAeACsAAgAFAAQAAAAeACwAAgAFAAUAAAAeAC0AAgAFAAYAAAAeAC4AAgAFAAcAAAA2ACsAAgAAAAQAAAA2ACwAAgAAAAUAAAA2AC0AAgAAAAYAAAA2AC4AAgAAAAcAAAA3ACsAAgABAAQAAAA3ACwAAgABAAUAAAA3AC0AAgABAAYAAAA3AC4AAgABAAcAAAA4ACsAAgACAAQAAAA4ACwAAgACAAUAAAA4AC0AAgACAAYAAAA4AC4AAgACAAcAAAAUADQAAgAGAAcAAAAVADQAAgAHAAcAAAAWADQAAgAHAAYAAAAOADEAAgAAAAQAAAAOADIAAgAAAAUAAAAOADMAAgAAAAYAAAAPADEAAgABAAQAAAAPADIAAgABAAUAAAAPADMAAgABAAYAAAAQADEAAgACAAQAAAAQADIAAgACAAUAAAAQADMAAgACAAYAAAAOADQAAgAAAAcAAAAPADQAAgABAAcAAAAQADQAAgACAAcAAAAsACsAAgAAAAQAAAAsACwAAgAAAAUAAAAsAC0AAgAAAAYAAAAsAC4AAgAAAAcAAAAtACsAAgABAAQAAAAtACwAAgABAAUAAAAtAC0AAgABAAYAAAAtAC4AAgABAAcAAAAvACsAAgACAAQAAAAvACwAAgACAAUAAAAvAC0AAgACAAYAAAAvAC4AAgACAAcAAAAuACsAAgABAAQAAAAuACwAAgABAAUAAAAuAC0AAgABAAYAAAAuAC4AAgABAAcAAAAkADEAAgAAAAQAAAAkADIAAgAAAAUAAAAkADMAAgAAAAYAAAAkADQAAgAAAAcAAAAlADEAAgABAAQAAAAlADIAAgABAAUAAAAlADMAAgABAAYAAAAlADQAAgABAAcAAAAmADEAAgACAAQAAAAmADIAAgACAAUAAAAmADMAAgACAAYAAAAmADQAAgACAAcAAAAqADQAAgAGAAcAAAArADQAAgAHAAcAAAAsADQAAgAHAAYAAAA=")
 tile_set = SubResource("TileSet_otbed")
 
 [node name="Base13" type="TileMapLayer" parent="." unique_id=904005236]
@@ -904,16 +904,25 @@ texture = ExtResource("12_fwq03")
 vframes = 8
 
 [node name="Sprite2D5" type="Sprite2D" parent="Newspapers" unique_id=2073913502]
-position = Vector2(955, 3131.0002)
-scale = Vector2(5, 5)
+position = Vector2(337, 3065)
+scale = Vector2(3, 3)
 texture = ExtResource("12_fwq03")
 vframes = 8
 
 [node name="Sprite2D8" type="Sprite2D" parent="Newspapers" unique_id=1703862053]
 modulate = Color(4.813075e-08, 0.40449965, 0.41118693, 1)
-position = Vector2(340.99997, 3065)
+position = Vector2(846.00006, 3133)
 scale = Vector2(3.26, 3.26)
 texture = ExtResource("12_fwq03")
+flip_h = true
+vframes = 8
+
+[node name="Sprite2D10" type="Sprite2D" parent="Newspapers" unique_id=1430736687]
+modulate = Color(4.813075e-08, 0.40449965, 0.41118693, 1)
+position = Vector2(969, 4525)
+scale = Vector2(3.26, 3.26)
+texture = ExtResource("12_fwq03")
+flip_h = true
 vframes = 8
 
 [node name="Sprite2D6" type="Sprite2D" parent="Newspapers" unique_id=1472077515]
@@ -934,9 +943,9 @@ process_mode = 3
 position = Vector2(1001, 33)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Issue #621 - 03.02.04"
-text = "City Hall!
-"
+Issue = "Issue #621 - 08.06.06"
+text = "We have confirmation that Minister Raisor, Head of the Kaielan Church has passed away, as of yesterday, due to a heart attack.
+This is a devastating blow to the city. We will be asking Father Sidney on his thoughts on this tragedy."
 color = Color(0.89411765, 0.8745098, 0.8745098, 1)
 bodyLink = NodePath("../../Rat1")
 
@@ -948,9 +957,8 @@ process_mode = 3
 position = Vector2(1076, 276)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Issue #322 - 12.25.99"
-text = "City Hall!
-"
+Issue = "Issue #743 - 11.24.07"
+text = "The S.C.U.R.R.Y Program, led by Doctor Edel, focuses on the study of language in animals. Her most recent breakthrough was a group of rats, all able to perfectly understand (and even spell) words in English and French."
 color = Color(0.89411765, 0.8745098, 0.8745098, 1)
 bodyLink = NodePath("../../Rat1")
 
@@ -962,9 +970,9 @@ process_mode = 3
 position = Vector2(2226, 404)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Page 12 - Volume 4"
-text = "City Hall!
-"
+Issue = "Issue #212 - 11.07.03"
+text = "After the recent Mayoral Announcement that Sandstone is no longer a safe place to live in, due to the unstable material in the buildings, we report that mass looting and evacuation has  started.
+We encourage you all to leave."
 color = Color(1, 1, 1, 1)
 bodyLink = NodePath("../../Rat2")
 
@@ -973,14 +981,15 @@ shape = SubResource("RectangleShape2D_otbed")
 
 [node name="Newspaper4" type="Area2D" parent="Newspapers" unique_id=1587178719 node_paths=PackedStringArray("bodyLink")]
 process_mode = 3
-position = Vector2(942, 3140)
+position = Vector2(340.99997, 3050.0002)
+scale = Vector2(0.58, 0.58)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Page 12 - Volume 4"
-text = "City Hall!
-"
+Issue = "Issue #793 - 12.06.07"
+text = "Kaielan Priest Sidney and Private Eye Roman have asked us to show the following message:
+\"Dear readers, If anyone has any information regarding the day of Minister Raisor's death, Please contact us immediately.\""
 color = Color(1, 1, 1, 1)
-bodyLink = NodePath("../../Rat2")
+bodyLink = NodePath("../../Rat4")
 
 [node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper4" unique_id=1032333380]
 shape = SubResource("RectangleShape2D_otbed")
@@ -990,11 +999,10 @@ process_mode = 3
 position = Vector2(2073, 4349)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Page 12 - Volume 4"
-text = "City Hall!
-"
+Issue = "Issue #746 - 11.30.07"
+text = "A study at Sandstone General suggests that Salted Bagels are incredibly detrimental to the heart, even as little as 3 can cause issues in people with a family history of heart disease. Bakeries will be forced to stop selling them until further notice."
 color = Color(1, 1, 1, 1)
-bodyLink = NodePath("../../Rat2")
+bodyLink = NodePath("../../Rat6")
 
 [node name="NP" type="CollisionShape2D" parent="Newspapers/Newspaper5" unique_id=935230840]
 shape = SubResource("RectangleShape2D_otbed")
@@ -1005,10 +1013,9 @@ position = Vector2(1578, -37)
 script = ExtResource("20_7o785")
 Nodrach_Type = "Music"
 Issue = "Number 19 - October"
-text = "SWAP!
-This band 'round the Muso-sphere found its roots in Sandstone in '92
-Most famously, SWAP sold portable speakers to connect cassettes to.
-Want to play music loud enough for everyone can hear you? Shout it! SWAP!"
+text = "SWAP! The band that comforted 1000s during the Sandstone Evacuation. 
+Legends say if you shout their name into a speaker, even the rats will insist to help you with whatever you need.
+More about them on No. 22."
 color = Color(5.0055983e-06, 0.7433952, 0.74339503, 1)
 bodyLink = NodePath("../../Rat1")
 
@@ -1017,18 +1024,31 @@ shape = SubResource("RectangleShape2D_otbed")
 
 [node name="Music2" type="Area2D" parent="Newspapers" unique_id=437570767 node_paths=PackedStringArray("bodyLink")]
 process_mode = 3
-position = Vector2(340, 3037)
+position = Vector2(860, 3119)
 script = ExtResource("20_7o785")
 Nodrach_Type = "Music"
-Issue = "Number 19 - October"
-text = "SWAP!
-This band 'round the Muso-sphere found its roots in Sandstone in '92
-Most famously, SWAP sold portable speakers to connect cassettes to.
-Want to play music loud enough for everyone can hear you? Shout it! SWAP!"
+Issue = "Number 22 - December"
+text = "Once, lead singer of SWAP (Pat Stevens), expressed his utter distaste for [color=#ff0000]MOCHA[/color] Coffee, during a concert in 2002. This caused a rampant hatred of [color=#ff0000]MOCHA[/color] coffee among all  Sandstonians.
+Seriously, scream it in a coffee shop and get beat up."
 color = Color(5.0055983e-06, 0.7433952, 0.74339503, 1)
-bodyLink = NodePath("../../Rat1")
+bodyLink = NodePath("../../Rat4")
 
 [node name="NP" type="CollisionShape2D" parent="Newspapers/Music2" unique_id=924065751]
+position = Vector2(-5, 12.5)
+shape = SubResource("RectangleShape2D_l4nyt")
+
+[node name="Music3" type="Area2D" parent="Newspapers" unique_id=1748083363 node_paths=PackedStringArray("bodyLink")]
+process_mode = 3
+position = Vector2(972, 4519)
+script = ExtResource("20_7o785")
+Nodrach_Type = "Music"
+Issue = "Number 54 - October"
+text = "Mark your calendars! SWAP is coming back! A reunited world tour, playing alongside 'Der Garten'! Starting in Toronto on the 6th of July, then New Delhi and more! 
+With this, the resale of the 'vintage' cassette boosting speakers will commence! "
+color = Color(5.0055983e-06, 0.7433952, 0.74339503, 1)
+bodyLink = NodePath("../../Rat5")
+
+[node name="NP" type="CollisionShape2D" parent="Newspapers/Music3" unique_id=205081542]
 position = Vector2(-5, 12.5)
 shape = SubResource("RectangleShape2D_l4nyt")
 
@@ -1243,7 +1263,7 @@ position = Vector2(1382, 1677.9999)
 scale = Vector2(0.685, 0.685)
 script = ExtResource("25_s6fgj")
 ID = 1
-text = "[color=#ff0000][E][/color] Talk"
+text = "[color=#ff0000][E][/color] Shout"
 bodyLink = NodePath("../../Rat3")
 
 [node name="NP" type="CollisionShape2D" parent="Pop-ups/talk_popup3" unique_id=1605411181]
@@ -1426,11 +1446,11 @@ shape = SubResource("RectangleShape2D_otbed")
 [node name="peer" type="Node2D" parent="Pop-ups/peeriph2" unique_id=297417177]
 visible = false
 z_index = 150
-position = Vector2(13.138687, 56.934494)
+position = Vector2(13.138687, 23.35785)
 
 [node name="Peer01" type="Sprite2D" parent="Pop-ups/peeriph2/peer" unique_id=442228444]
-position = Vector2(2.9197998, -4.3793945)
-scale = Vector2(8.759126, 8.759126)
+position = Vector2(2.9197998, -16.057861)
+scale = Vector2(5.434, 5.434)
 texture = ExtResource("29_vcknv")
 
 [node name="POPUP" type="RichTextLabel" parent="Pop-ups/peeriph2/peer" unique_id=1438369332]
@@ -1487,6 +1507,8 @@ texture = ExtResource("28_62ubf")
 [connection signal="body_exited" from="Newspapers/Music" to="Newspapers/Music" method="exitArea"]
 [connection signal="body_entered" from="Newspapers/Music2" to="Newspapers/Music2" method="enterArea"]
 [connection signal="body_exited" from="Newspapers/Music2" to="Newspapers/Music2" method="exitArea"]
+[connection signal="body_entered" from="Newspapers/Music3" to="Newspapers/Music3" method="enterArea"]
+[connection signal="body_exited" from="Newspapers/Music3" to="Newspapers/Music3" method="exitArea"]
 [connection signal="body_entered" from="Newspapers/History" to="Newspapers/History" method="enterArea"]
 [connection signal="body_exited" from="Newspapers/History" to="Newspapers/History" method="exitArea"]
 [connection signal="body_entered" from="Newspapers/History2" to="Newspapers/History2" method="enterArea"]

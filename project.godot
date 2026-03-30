@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 globdat="*uid://ckomqyxxn6x1a"
 NPP="*uid://btxsodai5w88d"
+SFX="*uid://bjiwi6jec5ofb"
+MSC="*uid://bqm7ehtvhhhkt"
 
 [display]
 
