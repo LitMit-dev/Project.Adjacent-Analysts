@@ -1,7 +1,5 @@
 ################################################################
 
-#start history ft saint kaiel
-
 To do:
 
 -SCREEN 2:
@@ -10,13 +8,11 @@ To do:
 	-Newspaper BGS####################
 	-Hints###############
 	
-	-Newspaper Text
-	
 	-SFX wavs
 	-Final Music wavs
 
 -SCREEN 3:
-	-Badges
+	
 	-Final Script
 	
 	-SFX wavs
@@ -39,3 +35,5 @@ Complete:
 -Change Menu text on key
 -Newspaper BGS
 -Hints
+-Newspaper Text
+-Badges

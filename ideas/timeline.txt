@@ -25,3 +25,23 @@ pg 13 vol 1 - august-nov 1918 at some point Saint Kaiel Died and his followers b
 07.06.2006 - The Death of Raisor
 
 12.06.2007 - Today
+
+-=-=-=-=-=-=
+
+Characters:
+	Minister Sidney: Adv. Faithsman
+	Father Sidney: Faithsman
+	Sidney: Eye
+	Roman: Eye
+	Mary: Public
+	Cafeguy: Public
+	Edel: Laborta
+
+Badges:
+	Public -> None
+	Eyes -> Eye
+	Rat -> taperec
+	Faithsman - > K symbol
+	Adv. Faithsman -> bigger K
+	Laborta -> flask
+	Murderer -> Bagel

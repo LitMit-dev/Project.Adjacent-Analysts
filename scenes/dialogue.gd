@@ -48,6 +48,21 @@ func prog_text():
 
 func swap_name(newName: String):
 	$Name.text = newName
+	var icon = $Portraitmask/icon
+	if newName == "Sidney" or newName == "Roman":
+		icon.texture = load("res://assets/priest_case/badges/Eye.png")
+	elif newName == "Father Sidney":
+		icon.texture = load("res://assets/priest_case/badges/badgefaith1.png")
+	elif newName == "Doctor Edel":
+		icon.texture = load("res://assets/priest_case/badges/Doctor.png")
+	elif newName == "Rat" or newName == "Recorder":
+		icon.texture = load("res://assets/priest_case/badges/ratund.png")
+	elif newName == "Minister Sidney":
+		icon.texture = load("res://assets/priest_case/badges/badgefaith2.png")
+	elif newName == "Damien":
+		icon.texture = load("res://assets/priest_case/badges/murderer.png")
+	else:
+		icon.texture = null
 
 func swap_dialogue(newText: String, noskip=false):
 	$Text.text = newText

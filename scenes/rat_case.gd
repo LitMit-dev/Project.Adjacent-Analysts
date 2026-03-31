@@ -23,17 +23,12 @@ const RAT_DIALOGUE = {
 	"3"=[
 		"Thus, I conclude the story of the rat.", 
 		"In summary.", 
-		"The rat found itself lost, grasping for any familiarity.", 
+		"The rat found itself lost, in a box, grasping for any familiarity.", 
 		"Yet it had a heart, a heart of which was more caring than most.", 
 		"It had donned the duty of finding the owner of the device, whilst trying to solve the case of its own identity.",
 		"The rat never knew the owner was long gone. It never truly had a home either.",
-		"Yet, I strive to be the rat, we should strive to have its level of persistence.", 
+		"Yet, I strive to be the rat. We all, should strive to have its level of courage.", 
 		"And so today marks my final day here in this church.",
-		"I know I have helped many of you.",
-		"But there will be other priests to be with you now.",
-		"I must follow my ambition. After all, 'Every human's life ends the same way.'",
-		"'It's only the details of how they lived and how they died that distinguish one person from another.'",
-		"My wish is to live in a new way where I can help more people than I do now.",
 		"Sandstone is like our box, we feel trapped but we can leave at any time.",
 		"I encourage you all to do the same as the rat, find your way Outside The Box. Follow yourself.",
 		"Thank you all."
@@ -45,8 +40,6 @@ func _ready() -> void:
 	DL.not_active = true
 	DL.ratify()
 	DL.hide()
-	globdat.cur_rat = 1
-	globdat.has_tape_rec = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

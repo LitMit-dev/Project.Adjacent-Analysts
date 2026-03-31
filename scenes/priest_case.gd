@@ -19,6 +19,7 @@ func _ready() -> void:
 		await law_ending()
 	else:
 		await faith_ending()
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/main.tscn")
 	
 	
 	#TAke to main screen, or blank with "u got a medal"
@@ -73,16 +74,16 @@ func confessional():
 	DL.swap_name("???")
 	DL.swap_dialogue("My intent was not malice, and you need not stay professional father.")
 	DL.prog_text()
-	await DL.advance_text 
+	await DL.advance_text
 	
 	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("This defeats the purpose I know... but what is your name-?", true)
 	await DL.prog_text()
 	
 	DL.swap_name("???")
-	DL.swap_dialogue("You understand the rough patch Sandstone has had this year, Sidney. More than anyone.")
+	DL.swap_dialogue("You understand the rough patch Sandstone has had these years, Sidney. More than anyone.")
 	DL.prog_text()
-	await DL.advance_text 
+	await DL.advance_text
 	
 	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("Can you stop interrupting me, Who are you-", true)
@@ -290,7 +291,7 @@ func interviews():
 		ANBG.loop_anim(5, 0.43)
 		
 		DL.swap_name("Roman")
-		DL.swap_dialogue("Thanks. Remember, a family history of heart issues can be exploited Sidney.")
+		DL.swap_dialogue("Hm, that can be exploited Sidney.")
 		DL.prog_text()
 		await DL.advance_text
 		ANBG.end_anim()
@@ -304,7 +305,7 @@ func interviews():
 		ANBG.loop_anim(5, 0.43)
 		
 		DL.swap_name("Father Sidney")
-		DL.swap_dialogue("Right! like in 2004, that case with the doctor who gave her patients clotting agents on purpose.")
+		DL.swap_dialogue("Yeah, Like in 2002, with that doctor who gave her patients clotting agents on purpose.")
 		DL.prog_text()
 		await DL.advance_text
 		
@@ -321,7 +322,7 @@ func interviews():
 		ANBG.set_anim(ANBG.anim_index.spouse_idle, 5)
 		ANBG.loop_anim(5, 0.43)
 		DL.swap_name("Roman")
-		DL.swap_dialogue("We understand it was a few months ago, but where were you around the time he died?")
+		DL.swap_dialogue("We understand it was over a year ago, but where were you around the time he died?")
 		DL.prog_text()
 		await DL.advance_text
 		DL.swap_name("Father Sidney")
@@ -530,15 +531,14 @@ func interviews():
 		ANBG.set_anim(ANBG.anim_index.lab_idle, 6)
 		ANBG.loop_anim(6, 0.43)
 		
-		DL.swap_name("Roman")
-		DL.swap_dialogue("Thanks. Remember, a family history of heart issues can be exploited Sidney.")
+		DL.swap_name("Father Sidney")
+		DL.swap_dialogue("That can be exploited. Like that case with that doctor.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("The one who gave her patients clotting agents on purpose. In 2002 I believe.")
 		DL.prog_text()
 		await DL.advance_text
 		
-		DL.swap_name("Father Sidney")
-		DL.swap_dialogue("Right! like in 2004, that case with the doctor who gave her patients clotting agents on purpose.")
-		DL.prog_text()
-		await DL.advance_text
 		
 		ANBG.end_anim()
 		await ANBG.anim_looped
@@ -692,6 +692,15 @@ func rat_chase():
 	#DIALOGUE START
 	DL.show()
 	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Alright, overall where are we at.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Sent out the request to the journalists at Sand-Paper,")
+	DL.prog_text()
+	await DL.advance_text
+	
 	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("So basically some guy, likely a baker, gave Raisor a lethal amount of salt.")
 	DL.prog_text()
@@ -793,7 +802,7 @@ func rat_chase():
 	DL.swap_dialogue("Well, it's not the people over there watching hockey. Sounds like it's outside.")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_name("???")
+	DL.swap_name("?")
 	DL.swap_dialogue("M..O..C..H..A")
 	DL.prog_text()
 	await DL.advance_text
@@ -977,7 +986,7 @@ func rat_wait():
 	DL.create_choices("Force them into church for the rest of their life.", "Bring him, and the evidence, to the police.")
 	var end = await DL.get_choice()
 	
-	if end == 0: 
+	if end == 0:
 		ALIGNMENT -= 1
 		DL.swap_name("Roman")
 		DL.swap_dialogue("Make him repent?")
@@ -1015,6 +1024,7 @@ func rat_wait():
 	DL.prog_text()
 	await DL.advance_text
 	DL.hide()
+	
 func bakery():
 	
 	#ANBG.end_anim()
@@ -1051,20 +1061,18 @@ func bakery():
 	DL.swap_dialogue("(He hasn't paid rent in a while.)")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("(Is that why he did this?)")
+	DL.swap_dialogue("(Seems like.... Damien, Damien Black, is having a rough few months.)")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("(Financial motive? But he didn't steal anything expensive...)")
 	DL.prog_text()
-	await DL.advance_text 
+	await DL.advance_text
 	DL.swap_dialogue("(Oh, there's a menu here too.)")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("(Bear claws... Brownies... Cupcakes......... and Salted Bagels.)")
 	DL.prog_text()
-	await DL.advance_text 
-
-
+	await DL.advance_text
 	ANBG.end_anim()
 	await ANBG.anim_looped
 	
@@ -1076,78 +1084,366 @@ func bakery():
 	
 	ANBG.end_anim()
 	await ANBG.anim_looped
-	DL.hide()
 	
+	DL.hide()
+	########################
 	ANBG.swap_bg(ANBG.bg_index.bakerside_kitchen)
 	ANBG.set_anim(ANBG.anim_index.baker_getup,4)
 	await ANBG.play_anim_once(4, 0.43)
 	#confrontation, whyd ya do it blah blah blah
-	DL.show()
 	ANBG.set_anim(ANBG.anim_index.baker_caution, 4)
-	ANBG.play_anim_once(4, 0.43)
+	await ANBG.play_anim_once(4, 0.43)
+	
+	
+	DL.show()
+	ANBG.swap_bg(ANBG.bg_index.bakerside_kitchen)
+	ANBG.set_anim(ANBG.anim_index.baker_talk, 4)
+	ANBG.loop_anim(4, 0.43)
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Bakery's closed. How did you get in?-", true)
+	await DL.prog_text()
 	
 	ANBG.end_anim()
-	await ANBG.anim_looped######amend
-	
+	await ANBG.anim_looped
 	ANBG.swap_bg(ANBG.bg_index.priest_kitchen)
 	ANBG.set_anim(ANBG.anim_index.kitchen_talk, 4)
 	ANBG.loop_anim(4, 0.43)
-	DL.swap_name("???")
-	DL.swap_dialogue("Bakery's closed. How did you get in?-", true)
-	await DL.prog_text()
-	ANBG.set_anim(ANBG.anim_index.baker_caution, 4)
-	ANBG.play_anim_once(4, 0.43)
 	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("How are you today. My child?")
 	DL.prog_text()
 	await DL.advance_text
+	DL.hide()
 	ANBG.end_anim()
 	await ANBG.anim_looped
+	
+	ANBG.swap_bg(ANBG.bg_index.bakerside_kitchen)
 	ANBG.set_anim(ANBG.anim_index.baker_caution, 4)
 	ANBG.loop_anim(4, 0.43)
-	DL.swap_name("???")
-	DL.swap_dialogue("Good. You work at the church, don't you? Father uh... Remind me.")
+	await get_tree().create_timer(3).timeout
+	
+	ANBG.end_anim()
+	await ANBG.anim_looped
+	ANBG.set_anim(ANBG.anim_index.baker_talk, 4)
+	ANBG.loop_anim(4, 0.43)
+	DL.swap_name("Damien")
+	DL.show()
+	DL.swap_dialogue("I'm good. You work at the church, don't you? Father uh... Remind me.")
 	DL.prog_text()
 	await DL.advance_text
+	
+	ANBG.end_anim()
+	await ANBG.anim_looped
+	ANBG.swap_bg(ANBG.bg_index.priest_kitchen)
+	ANBG.set_anim(ANBG.anim_index.kitchen_talk, 4)
+	ANBG.loop_anim(4, 0.43)
 	DL.swap_name("Father Sidney")
-	DL.swap_dialogue("Sidney, but you already knew that, didn't you.")
+	DL.swap_dialogue("Sidney, but you already knew that, didn't you?")
 	DL.prog_text()
 	await DL.advance_text
+	
 	DL.swap_name("Roman")
-	DL.swap_dialogue("Would you mind answering a few questions.")
+	DL.swap_dialogue("Would you mind answering a few questions?")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_name("???")
+	
+	ANBG.end_anim()
+	await ANBG.anim_looped
+	ANBG.swap_bg(ANBG.bg_index.bakerside_kitchen)
+	ANBG.set_anim(ANBG.anim_index.baker_talk, 4)
+	ANBG.loop_anim(4, 0.43)
+	DL.swap_name("Damien")
 	DL.swap_dialogue("Of course, but uh. I have a... I need to go to")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("I can come to the church tomorrow if-", true)
 	DL.prog_text()
 	await DL.advance_text
+	
+	ANBG.end_anim()
+	await ANBG.anim_looped
+	ANBG.swap_bg(ANBG.bg_index.priest_kitchen)
+	ANBG.set_anim(ANBG.anim_index.kitchen_talk, 4)
+	ANBG.loop_anim(4, 0.43)
 	DL.swap_name("Roman")
 	DL.swap_dialogue("Don't worry, it won't take long.")
 	DL.prog_text()
 	await DL.advance_text
-
-	#at the end
-	ANBG.swap_bg(ANBG.bg_index.priest_kitchen)
-	ANBG.set_anim(ANBG.anim_index.kitchen_evidence, 4)
-	ANBG.loop_anim(4, 0.43)
-	DL.swap_name("Baker")
-	DL.swap_dialogue("Lets see...")
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Do you pray often, Mister Damien?")
 	DL.prog_text()
 	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Admittedly no. I haven't ever since... No. I haven't.")
+	DL.prog_text()
+	await DL.advance_text
+
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("This is a safe space, Why don't you pray Damien?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("That's an unfair question, would you like some tea, sir?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Well... Coffee would be fine-", true)
+	await DL.prog_text()
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("When you poisoned Minister Raisor, what were you thinking?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("I didn't poison him-!", true)
+	await DL.prog_text()
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Thats right, you just gave him four times the safe amount of sodium.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("No- I-", true)
+	await DL.prog_text()
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("You killed Minister Raisor, but why? Why!")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Okay! I did it. Fine, I did it.")
+	await DL.prog_text()
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Why did you do any of this? You clearly have remorse.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("For someone who confessed on tape, you're too defensive.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("I just wanted to confess.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("I didn't think you would hunt me down!")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("You still haven't answered why you killed Raisor.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("I- Ever since the evacuation, the economy in this city...")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("It's been rough. And my most popular item is going to be banned!")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("The CFIA screwed me over with the new food legislations. I don't care that Salted Bagels are dangerous.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("If I can't sell them, I can't pay rent. And if I can't pay rent...")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Then why didn't you just steal Raisor's jewellery?")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_name("Damien")
+	DL.swap_dialogue("The jewellery would've been too obvious. And I panicked.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("I thought the tape would come in handy somehow, it never did.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Why do you need money so badly. And why only in a careful way?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("My mother. She lost her legs. Trampled. Broke both her knees beyond saving.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("When I have no home, She has no home. I can't risk anything too severely.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("She's only alive because you helped her Sidney.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("The old lady, with the swelling... she...", true)
+	await DL.prog_text()
+	DL.swap_dialogue("No! Shut up! Damien, stop- Why Raisor. Why. Raisor!")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Minister Raisor is the most popular figure in Sandstone.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("My favorite customer.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("If he died infront of my store. So, so many photos would have it in the background!")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Yet he fell down two blocks away. In front of an abandoned part of town.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("If. If I just gave him more bagels...")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Do you even regret what you did?! Look at me in my eyes.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("I was doing what I had to. But I confessed because I am sorry, deeply, truly sorry.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("(Nudge)")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Say it. Confess like you did a few minutes ago.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Alright. I sinned, I killed Minister Raisor.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("*Click*    *Whirl*")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("Hold on. What was-", true)
+	await DL.prog_text()
+	DL.swap_dialogue("No...")
+	DL.prog_text()
+	await DL.advance_text
+	
+	##Evidence
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Forgot about that? His tape recorder.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("What the hell is that rat doing here?!")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("I thought I threw it in the sewers!-")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Doesn't matter. You overwrote the original confession.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("How would a jury know that you didn't tell me to say that?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("There's two sides on a tape. (Thank god the rat used the clean one.)")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_name("Recorder")
+	DL.swap_dialogue("*clunk* Bless me father for I have sinned.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("*click* Alright. I sinned, I killed Minister Raisor.")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("Cool huh?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Damien")
+	DL.swap_dialogue("We can forget about this, we can!")
+	DL.prog_text()
+	await DL.advance_text
+	
+	DL.swap_name("Roman")
+	DL.swap_dialogue("No, we can't. Sidney. It's up to you. What do you want to do?")
+	DL.prog_text()
+	await DL.advance_text
+	
+	#bagel
+	
 	ANBG.end_anim()
 	await ANBG.anim_looped
-	
-	#fit in somewhere
-	
 	ANBG.swap_bg(ANBG.bg_index.bagel_shot)
-	ANBG.get_node("ANIM_LAYER").hide()
-	DL.swap_name("Bagel")
-	DL.swap_dialogue("Lets see...")
+	DL.swap_name("Father Sidney")
+	DL.swap_dialogue("I...")
 	DL.prog_text()
 	await DL.advance_text
+	DL.swap_dialogue("(I feel my decisions influencing me.)")
+	DL.prog_text()
+	await DL.advance_text
+	
+	if ALIGNMENT > 0:
+		DL.swap_dialogue("(I feel my Lawful duty as an Eye overpowering my Faith.)")
+		DL.prog_text()
+		await DL.advance_text
+	else:
+		DL.swap_dialogue("(I feel my Kaielan Faith overpowering my Lawful duty as an Eye.)")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("Damien. What you did was unforgivable. But I believe you had no ill intent.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("You were deeply misguided my child. I understand why you did it.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_name("Damien")
+		DL.swap_dialogue("Really- I. I don't know what to say- Thank you so so much-", true)
+		await DL.prog_text()
+		DL.swap_name("Father Sidney")
+		DL.swap_dialogue("Do not mistake my forgiveness for mercy.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("You will be working at the church for 28 years, the same amount of time Raisor did.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("Your mother will be looked after, in our ward, rest assured.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_name("Damien")
+		DL.swap_dialogue("Thank you. Thank you Father Sidney.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_name("Roman")
+		DL.swap_dialogue("As much as I believe he should rot in a cell, I trust you Sidney.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("Farewell to the both of you. I'll be there for your last sermon.")
+		DL.prog_text()
+		await DL.advance_text
 	
 	DL.hide()
 	ANBG.anim_state(false)
@@ -1202,31 +1498,31 @@ func faith_ending():
 	#DIALOGUE START
 	DL.show()
 	DL.swap_name("Minister Sidney")
-	DL.swap_dialogue("Dear Roman, be jolly.")
+	DL.swap_dialogue("Dear Roman, I haven't seen you since that sermon.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Partly because I was offered to become the Minister at the Toronto branch.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("But I write to you because I hope one day you'll join me.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("You and the rat, of course.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Soon you'll be too old to be an Eye. Leave your comfort zone.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Think Outside the Box for your future.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Many thanks,")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("Minister Sidney.")
 	DL.prog_text()
 	await DL.advance_text
 	
-	#Reg dialogue
-	DL.swap_name("_")
-	DL.swap_dialogue("_")
-	DL.prog_text()
-	await DL.advance_text
-	
-	#Cut-off dialogue
-	DL.swap_name("_")
-	DL.swap_dialogue("_", true)
-	await DL.prog_text()
-	
-	#newloop	
-	ANBG.end_anim()
-	await ANBG.anim_looped
-	ANBG.swap_bg(ANBG.bg_index.confess2)
-	ANBG.set_anim(ANBG.anim_index.confess2, 3)
-	ANBG.loop_anim(2, 0.43)
-	
-	#END
-	DL.hide()
-	ANBG.anim_state(false)
 
 
 func placeholder():

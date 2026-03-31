@@ -999,8 +999,8 @@ process_mode = 3
 position = Vector2(2073, 4349)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Issue #746 - 11.30.07"
-text = "A study at Sandstone General suggests that Salted Bagels are incredibly detrimental to the heart, even as little as 3 can cause issues in people with a family history of heart disease. Bakeries will be forced to stop selling them until further notice."
+Issue = "Issue #533 - 09.03.06"
+text = "A study at Sandstone General suggests that Salted Bagels are incredibly detrimental to the heart, even as little as 3 can cause issues in people with a family history of heart disease. The CFIA will be forcing bakeries to stop selling them in 2007."
 color = Color(1, 1, 1, 1)
 bodyLink = NodePath("../../Rat6")
 
@@ -1058,8 +1058,9 @@ position = Vector2(1979, -37)
 script = ExtResource("20_7o785")
 Nodrach_Type = "History"
 Issue = "Page 12 - Volume 4"
-text = "City Hall!
-"
+text = "Musical technology has changed over the years. Recently, \"SWAP\" released a 
+cassette booster. 
+This was their solution to fix a well known issue with tape recorders, noise dampening, which happens when the recorder get damaged."
 color = Color(1, 0.4509804, 0.3882353, 1)
 bodyLink = NodePath("../../Rat1")
 
@@ -1072,8 +1073,8 @@ position = Vector2(1024, 1685)
 script = ExtResource("20_7o785")
 Nodrach_Type = "History"
 Issue = "Page 27 - Volume 4"
-text = "City Hall!
-"
+text = "Saint Kaiel: 
+Although ordained by Pope Benedict the 15th, He publicly rejected the catholic church. The Kaielan faith, founded in 1918, was made in response to the news of Kaiel's death during the war. This subsector of religion is still popular in Ontario, Canada."
 color = Color(1, 0.4509804, 0.3882353, 1)
 bodyLink = NodePath("../../Rat3")
 
@@ -1177,8 +1178,8 @@ offset = Vector2(-52.5, 0)
 transform = Transform2D(1, 0, 0, 1, -52.5, 0)
 
 [node name="Taperec" type="Sprite2D" parent="." unique_id=654517186]
-position = Vector2(858, 20)
-scale = Vector2(2, 2)
+position = Vector2(830.00006, 14)
+scale = Vector2(3, 3)
 texture = ExtResource("23_gdbgu")
 
 [node name="Pop-ups" type="Node2D" parent="." unique_id=1650327996]

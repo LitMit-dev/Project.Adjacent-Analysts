@@ -315,14 +315,14 @@ texture = ExtResource("8_iehom")
 
 [node name="History" type="Node2D" parent="." unique_id=436749991]
 visible = false
-position = Vector2(-185, -29)
+position = Vector2(-183, -64)
 scale = Vector2(1.5, 1.5)
 
 [node name="Contents" type="RichTextLabel" parent="History" unique_id=1942043074]
 offset_left = 249.0
-offset_top = 155.0
+offset_top = 154.33325
 offset_right = 543.0
-offset_bottom = 530.0
+offset_bottom = 529.33325
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.47058824, 0.5882353, 0.7019608, 0.14901961)
 theme_override_constants/outline_size = 3
@@ -331,7 +331,6 @@ theme_override_fonts/bold_font = ExtResource("3_0ko4l")
 theme_override_font_sizes/normal_font_size = 21
 theme_override_font_sizes/bold_font_size = 26
 bbcode_enabled = true
-text = "Some might say toooooooooooooooooooooooooooo good"
 
 [node name="Title" type="RichTextLabel" parent="History" unique_id=251356999]
 offset_left = 249.0

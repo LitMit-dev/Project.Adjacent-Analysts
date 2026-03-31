@@ -59,6 +59,7 @@ const anim_index = {
 	bakery_noisehear = "res://assets/priest_case/anm/priestcase13C.png",
 	baker_getup = "res://assets/priest_case/anm/priestcase14-getup.png",
 	baker_caution = "res://assets/priest_case/anm/priestcase14-caution.png",
+	baker_talk = "res://assets/priest_case/anm/priestcase14-bakertalk.png",
 	kitchen_talk = "res://assets/priest_case/anm/priestcase14-2b.png",
 	kitchen_evidence = "res://assets/priest_case/anm/priestcase14-2.png",
 	letter_writing = "res://assets/priest_case/anm/priestcase15A.png",
