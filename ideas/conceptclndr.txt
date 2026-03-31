@@ -1,5 +1,5 @@
 # Adjacent Analysis RatPriest game calendar
-#Curday = 31
+#Curday = 31 I FUCKIN DID ITTTTTTTTTTTTTTTTTTTTTT
 #in event screens 2 and 3 arent done by wk2 end, drop 2nd case to focus on final and polish
 
 #Remember, think OUTSIDE THE BOX!
@@ -44,17 +44,17 @@ Week 4 (23-29) {
 Finaliser (30/31) {
 	##########Mon:  draw S3 badges, newspapers, etc
 	
-	Tue: FINALISE S3 SCRIPT. sfx, MUSIC MARKETING, start short,  DEADLINES, 
-	Web&EXE Export Due, Export YT SHORT DEADLINE (ANIMATION W MUSIC)
+	############################Tue: --FINALISE S3 SCRIPT. sfx, MUSIC -MARKETING, ---start short,  DEADLINES, 
+	Web&EXE Export Due, ---------------Export YT SHORT DEADLINE (ANIMATION W MUSIC)
 
 }
 
 DIA DE MUERTE: WEDNESDAY 01 APRIL MIDNIGHT:01
-HORAS LEFT: 30ISH
+HORAS LEFT: 6ISH
 
 ATHOTH! A GO GO!
 
 IF SPARE TIME AT ANY PT, DO
--MAIN SCREEN + ART
+---MAIN SCREEN + ART
 -MARKETING : START SHORT, ITCH COVER, ITCH PAGE ETC,
 -SFX/MUSIC

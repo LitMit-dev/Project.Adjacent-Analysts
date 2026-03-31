@@ -61,6 +61,7 @@ func logic():
 		if additional_links[0] is int:
 			globdat.cur_rat = additional_links[0]
 		else:
+			globdat.complete[1] = true
 			get_tree().call_deferred("change_scene_to_file", additional_links[0])
 
 func enterArea(body: Node2D) -> void:

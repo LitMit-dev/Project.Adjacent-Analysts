@@ -33,8 +33,11 @@ func prog_text():
 	for i in range(len($Text.text) + 1):
 		$Text.visible_characters += 1
 		
+ 
 		if $Text.text[i-1] != " " and !textEnd:
 			await get_tree().create_timer(letpersec).timeout
+		if globdat.path == "Rat" and $Text.text[i-1] != " " and !textEnd:
+			SFX.sfx("say")
 		if $Text.text[i-1] == "," and !textEnd:
 			await get_tree().create_timer(letpersec*3).timeout
 		if $Text.text[i-1] == "." and !textEnd:
@@ -80,6 +83,7 @@ func swap_portrait(character: String, expression: String):
 	$Portraitmask/icon.texture = load(character+"-"+expression)
 
 func ratify():
+	globdat.path = "Rat"
 	offset.x = -52.5
 	$Text.show()
 	$next_indic.hide()
@@ -89,6 +93,7 @@ func ratify():
 	$Name.hide()
 	
 func priestify():
+	globdat.path = "Priest"
 	offset.x = 0
 	$Text.show()
 	$NinePatchRect.show()
@@ -141,12 +146,27 @@ func destroy_choices():
 	
 
 func _input(event: InputEvent) -> void:
-	if not_active:
+	if event.is_action_pressed("menutog") and globdat.path == "Priest":
+		globdat.settings.MUSIC = !globdat.settings.MUSIC
 		return
-	if event is InputEventKey and !no_echo:
-		if event.is_action_pressed("menutog"):
-			MSC.stream_paused = !MSC.stream_paused 
+	elif event.is_action_pressed("hints")  and globdat.path == "Priest":
+		globdat.dialstagisma[1] = !globdat.dialstagisma[1]
+		globdat.dialstagisma[2] = 0
+		return
+	elif event.is_action_pressed("exit") and globdat.path == "Priest":
+		if globdat.dialstagisma[1]:
 			return
+		if globdat.dialstagisma[2] == 1:
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/main.tscn")
+		globdat.dialstagisma[2] += 1
+		
+		return
+		
+	if not_active or event.is_action_released("exit") or event.is_action_released("hints") or event.is_action_released("menutog"):
+		return
+		
+	if event is InputEventKey and !no_echo:
+		
 		
 		no_echo = true
 		

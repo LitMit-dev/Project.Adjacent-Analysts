@@ -40,21 +40,23 @@ func _ready() -> void:
 	
 	DL.priestify()
 	
-	MSC.volume_db = -2
 	MSC.set_file(MSC.paths.confession)
-	MSC.play()
+	MSC.safe_play()
 	await confessional()
-	MSC.set_file(MSC.paths.caferun)
 	await where_first()
-	MSC.set_file(MSC.paths.interviews)
 	await interviews()
 	await rat_chase()
 	await rat_wait()
 	await bakery()
+	
+	MSC.set_file(MSC.paths.the_end)
+	MSC.safe_play()
 	if ALIGNMENT > 0:
 		await law_ending()
 	else:
 		await faith_ending()
+	
+	globdat.complete[0] = true
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/main.tscn")
 	
 	
@@ -170,7 +172,8 @@ func confessional():
 	ANBG.anim_state(false)
 
 func where_first():
-	
+	MSC.set_file(MSC.paths.cafetalk)
+	MSC.safe_play()
 	#SETUP
 	DL.hide()
 	ANBG.swap_bg(ANBG.bg_index.cafe_morning)
@@ -227,18 +230,23 @@ func where_first():
 	DL.swap_dialogue("But, again. Heart attack. No poison was found in his blood.")
 	DL.prog_text()
 	await DL.advance_text
+	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("I know. But there was no further investigation at all.")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("We need to at least attempt a thorough one, like old times! Before I left for the church.")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_name("Roman")
-	DL.swap_dialogue("Alright then, if you're as sharp as you used to be,")
+	DL.swap_dialogue("We'll need to think outside the box for this.")
 	DL.prog_text()
 	await DL.advance_text
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Alright then, but no 'we'. If you're as sharp as you used to be,")
+	DL.prog_text()
+	await DL.advance_text
+	
 
-	DL.swap_dialogue("Why don't you pick where we go first?")
+	DL.swap_dialogue("Why don't you pick where we go?")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -273,6 +281,8 @@ func interviews():
 		DL.prog_text()
 		await DL.advance_text
 		
+		MSC.set_file(MSC.paths.interviews)
+		MSC.safe_play()
 		###go
 		ANBG.end_anim()
 		await ANBG.anim_looped
@@ -389,6 +399,9 @@ func interviews():
 		DL.swap_dialogue("Listened to his cassettes for longer than I'd like to admit.")
 		DL.prog_text()
 		await DL.advance_text
+		DL.swap_dialogue("Took 'em all Outside and threw The Boxes away a long time ago though.")
+		DL.prog_text()
+		await DL.advance_text
 		DL.swap_dialogue("Did they ever find his recorder Sid'? In the church or anythin'? It wasn't in his room.")
 		DL.prog_text()
 		await DL.advance_text
@@ -483,6 +496,8 @@ func interviews():
 		DL.prog_text()
 		await DL.advance_text
 		
+		MSC.set_file(MSC.paths.interviews)
+		MSC.safe_play()
 		###go
 		ANBG.end_anim()
 		await ANBG.anim_looped
@@ -531,7 +546,7 @@ func interviews():
 		DL.swap_dialogue("Of course, I can't print you a copy obviously.")
 		DL.prog_text()
 		await DL.advance_text
-		DL.swap_dialogue("But I can tell you two some details, as you are extentions of law enforcement.")
+		DL.swap_dialogue("But I can tell you two SOME details, as you are friends of law enforcement.")
 		DL.prog_text()
 		await DL.advance_text
 		ANBG.end_anim()
@@ -644,7 +659,7 @@ func interviews():
 		DL.swap_dialogue("I'm basically a pro by now, do you know how boring it is to sit and listen in that box?")
 		DL.prog_text()
 		await DL.advance_text
-		DL.swap_dialogue("See? I can balance it on my nos-", true)
+		DL.swap_dialogue("See? I can balance it on my nose-", true)
 		await DL.prog_text()
 		await ANBG.play_anim_once(5, 0.12)
 		
@@ -653,7 +668,10 @@ func interviews():
 		ANBG.loop_anim(6, 0.43)
 		
 		DL.swap_name("Father Sidney")
-		DL.swap_dialogue("He did. As of right now it's still missing.")
+		DL.swap_dialogue("He did have a recorder. As of right now it's still missing.")
+		DL.prog_text()
+		await DL.advance_text
+		DL.swap_dialogue("Raisor really did have no enemies though.")
 		DL.prog_text()
 		await DL.advance_text
 		
@@ -694,7 +712,7 @@ func interviews():
 		ANBG.set_anim(ANBG.anim_index.lab_talk, 6)
 		ANBG.loop_anim(6, 0.43)
 		DL.swap_name("Doctor Edel")
-		DL.swap_dialogue("Why are you laughing. We've been set back months by it going missing.")
+		DL.swap_dialogue("Why are you laughing. We have been set back months by it going missing.")
 		DL.prog_text()
 		await DL.advance_text
 		ANBG.end_anim()
@@ -723,6 +741,8 @@ func rat_chase():
 	ANBG.end_anim()
 	await ANBG.anim_looped
 	
+	MSC.set_file(MSC.paths.cafetalk)
+	MSC.safe_play()
 	DL.hide()
 	ANBG.swap_bg(ANBG.bg_index.cafe_day)
 	ANBG.set_anim(ANBG.anim_index.cafe_speak, 3)
@@ -743,6 +763,9 @@ func rat_chase():
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("Definitely someone with access to plastic gloves.")
+	DL.prog_text()
+	await DL.advance_text
+	DL.swap_dialogue("And there's still no clue on where that tape recorder ended up.")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -862,6 +885,8 @@ func rat_chase():
 	DL.swap_dialogue("..Is that rat carrying something?")
 	DL.prog_text()
 	await DL.advance_text
+	MSC.set_file(MSC.paths.cafe_run)
+	MSC.safe_play()
 	ANBG.end_anim()
 	await ANBG.anim_looped
 	ANBG.swap_bg(ANBG.bg_index.cafe_see_rat)
@@ -873,13 +898,15 @@ func rat_chase():
 	await get_tree().create_timer(1.4).timeout
 	
 	DL.swap_name("Roman")
-	DL.swap_dialogue("Let's get it! Quickly!", true)
+	DL.swap_dialogue("Quickly! Keep Going! Now!", true)
 	DL.prog_text()
 	ANBG.swap_bg(ANBG.bg_index.deadend_alley)
 	ANBG.set_anim(ANBG.anim_index.alley_ratchase, 3)
 	await ANBG.play_anim_once(3, 0.72)
 	await get_tree().create_timer(2).timeout
 	
+	MSC.set_file(MSC.paths.cafetalk)
+	MSC.safe_play()
 	DL.swap_name("Father Sidney")
 	DL.swap_dialogue("*huff* Well, what now?")
 	DL.prog_text()
@@ -955,7 +982,7 @@ func rat_chase():
 	await DL.advance_text
 	
 	DL.swap_name("Rat")
-	DL.swap_dialogue("M..E     F..I..N..D     T..R..")
+	DL.swap_dialogue("M..E     F..I..N..D   ")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -968,10 +995,10 @@ func rat_chase():
 	
 	
 	DL.swap_name("Roman")
-	DL.swap_dialogue("Ah... But you jumped Outside The Box, started looking for him after finding 'his' recorder?")
+	DL.swap_dialogue("Ah... But you jumped Outside The Box, and started looking for him after finding 'his' recorder?")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("Will you help us open this door by going through that mailbox?")
+	DL.swap_dialogue("Will you help us open his door by going through his mailbox?")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_name("Rat")
@@ -1147,7 +1174,8 @@ func rat_wait():
 	DL.hide()
 	
 func bakery():
-	
+	MSC.set_file(MSC.paths.bakeryofsin)
+	MSC.safe_play()
 	ANBG.swap_bg(ANBG.bg_index.open_door)
 	ANBG.set_anim(ANBG.anim_index.door_open, 3)
 	await ANBG.play_anim_once(3, 0.43)
@@ -1501,7 +1529,8 @@ func bakery():
 	DL.swap_dialogue("When I have no home, She has no home. I can't risk anything too severely.")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("She's only alive because you helped her Sidney. During the evacuation.")
+	
+	DL.swap_dialogue("She's only okay because you helped her Sidney. During the evacuation.")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -1856,7 +1885,7 @@ func faith_ending():
 	#DIALOGUE START
 	DL.show()
 	DL.swap_name("Minister Sidney")
-	DL.swap_dialogue("Dear Roman, I haven't seen you since my last sermon, I'm glad you came.")
+	DL.swap_dialogue("Dear Roman, I haven't seen you since my last sermon.")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("Partly because I was offered to become the Minister at the Toronto branch.")

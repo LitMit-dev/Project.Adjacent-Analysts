@@ -27,13 +27,13 @@ var text = "_____"
 func smooth_out():
 	z_index = 99
 	transing = true
-	MSC.fade_in()
+	MSC.fade_out()
 	$Transitor.play("fade_in")
 	
 
 func smooth_in():
 	z_index = baseZ
-	MSC.fade_out()
+	MSC.fade_in()
 	$Transitor.play_backwards("fade_in")
 	transing = false
 
@@ -106,7 +106,7 @@ func CoyoteEnd():
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
-		if event.is_action_pressed("START_SONG") and !isSinging and !MenuActive:
+		if event.is_action_pressed("START_SONG") and !isSinging and !MenuActive and !transing:
 			start_voice()
 		elif event.is_action_pressed("END_SONG") and isSinging:
 			end_voice()
@@ -116,7 +116,7 @@ func _input(event: InputEvent) -> void:
 			globdat.settings.MUSIC = !globdat.settings.MUSIC
 		elif event.is_action_pressed("exit") and MenuActive:
 			get_tree().call_deferred("change_scene_to_file", "res://scenes/main.tscn")
-		elif event.is_action_pressed("menutog") and !MenuActive and !isSinging:
+		elif event.is_action_pressed("menutog") and !MenuActive and !isSinging and !transing:
 			menu_open()
 		elif event.is_action_pressed("menutog") and MenuActive:
 			menu_close()

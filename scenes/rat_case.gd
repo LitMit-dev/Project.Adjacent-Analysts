@@ -37,11 +37,15 @@ const RAT_DIALOGUE = {
 		]
 }
 
+const rat_music = [MSC.paths.balcony, MSC.paths.cafe, MSC.paths.bakery]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DL.not_active = true
 	DL.ratify()
 	DL.hide()
+	MSC.set_file(MSC.paths.sewers)
+	MSC.safe_play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,3 +62,6 @@ func talk(num):
 		await get_tree().create_timer(1.5).timeout
 	DL.not_active = true
 	DL.hide()
+	if num != 3:
+		MSC.set_file(rat_music[num])
+		MSC.safe_play()

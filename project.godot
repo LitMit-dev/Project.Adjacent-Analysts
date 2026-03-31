@@ -12,8 +12,10 @@ config_version=5
 
 config/name="Adjacent Analysts"
 config/tags=PackedStringArray("26", "jam", "jan_mar", "unfinished")
+run/main_scene="uid://ck6svvo0j6rxa"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://du1ic2q2ig2bq"
+config/icon="uid://ia6ym6cvaatv"
 
 [autoload]
 

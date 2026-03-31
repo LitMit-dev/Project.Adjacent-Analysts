@@ -3,26 +3,18 @@
 To do:
 
 -SCREEN 2:
-	-Peer Backgrounds##############################
-	-Change Menu text on key########################
-	-Newspaper BGS####################
-	-Hints###############
-	
-	-SFX wavs
+
+
 
 -SCREEN 3:
 	
 	
-	-SFX wavs
 	
 -MISC INGAME:
 		
 	-Implement SFX and Music Singleton
 
 -MISC OTHER:
-	-Marketing on Itch
-	-Marketing - General
-	-YT short
 
 Complete:
 -Peer Backgrounds
@@ -31,12 +23,13 @@ Complete:
 -Hints
 -Newspaper Text
 -Badges
-	-Main Menu:
-		-BUTTONS
-		-BG_CLIPISH THING?
-
-	-Final Music wavs
+-Main Menu:
+-BUTTONS
+-BG_CLIPISH THING?
+-Final Music wavs
+-Final Script
+-Final Music wavs
 	
-	-Final Script
-	
-	-Final Music wavs
+	-SFX wavs
+	-Marketing on Itch
+	-Marketing - General

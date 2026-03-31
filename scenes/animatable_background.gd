@@ -4,6 +4,8 @@ class_name animatedBg
 
 var active_anim = false
 
+var ui = true
+
 signal anim_looped
 
 const bg_index = {
@@ -109,4 +111,7 @@ func play_anim_once(framecount, persec):
 			return 2
 
 func _process(delta: float) -> void:
-	$Label.text = [" [M] Music: ON", " [M] Music: OFF"][int(MSC.stream_paused)]
+	
+	$Node2D/Label.text = [" [M] Music: OFF", " [M] Music: ON"][int(globdat.settings.MUSIC)]
+	$Node2D.visible = !globdat.dialstagisma[1]
+	$Node2D/Label3.text = [" [ESC] Quit to Title", "[ESC] Are you sure?"][int(globdat.dialstagisma[2] == 1)]

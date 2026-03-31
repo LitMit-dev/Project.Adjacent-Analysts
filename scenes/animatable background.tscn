@@ -18,10 +18,30 @@ z_index = -3
 position = Vector2(400.00003, 300.00003)
 scale = Vector2(10, 10)
 
-[node name="Label" type="Label" parent="." unique_id=1725295296]
-offset_right = 97.0
+[node name="Node2D" type="Node2D" parent="." unique_id=362867959]
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1725295296]
+offset_right = 165.0
 offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("3_i61e1")
 theme_override_font_sizes/font_size = 35
 text = " [M] Music: ON"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Node2D" unique_id=1329670673]
+offset_right = 801.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_i61e1")
+theme_override_font_sizes/font_size = 35
+text = " [H] Hide/Unhide"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Node2D" unique_id=269700427]
+offset_left = 550.0
+offset_right = 800.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("3_i61e1")
+theme_override_font_sizes/font_size = 35
+text = "[ESC] Are you sure?"
+horizontal_alignment = 1
+autowrap_mode = 3
