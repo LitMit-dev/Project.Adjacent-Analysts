@@ -9,19 +9,13 @@ To do:
 	-Hints###############
 	
 	-SFX wavs
-	-Final Music wavs
 
 -SCREEN 3:
 	
-	-Final Script
 	
 	-SFX wavs
-	-Final Music wavs
 	
 -MISC INGAME:
-	-Main Menu:
-		-BUTTONS
-		-BG_CLIPISH THING?
 		
 	-Implement SFX and Music Singleton
 
@@ -37,3 +31,12 @@ Complete:
 -Hints
 -Newspaper Text
 -Badges
+	-Main Menu:
+		-BUTTONS
+		-BG_CLIPISH THING?
+
+	-Final Music wavs
+	
+	-Final Script
+	
+	-Final Music wavs

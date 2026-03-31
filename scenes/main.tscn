@@ -1,17 +1,66 @@
 [gd_scene format=3 uid="uid://ck6svvo0j6rxa"]
 
+[ext_resource type="Script" uid="uid://dneb4g5ofl863" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="FontFile" uid="uid://ljlhcdrrm26a" path="res://assets/fonts/VT323/VT323-Regular.ttf" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://c7totqdema1s3" path="res://assets/mainmen.png" id="3_sugp2"]
+[ext_resource type="FontFile" uid="uid://ffaomchs73fp" path="res://assets/fonts/Jersey_10/Jersey10-Regular.ttf" id="4_jyhfs"]
+
 [node name="Main" type="Node2D" unique_id=1826898307]
+script = ExtResource("1_o5qli")
 
-[node name="Button" type="Button" parent="." unique_id=41807398]
-offset_left = 119.0
-offset_top = 257.0
-offset_right = 184.0
-offset_bottom = 288.0
-text = "SIDNEY"
+[node name="Label" type="Label" parent="." unique_id=990479212]
+offset_right = 801.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_0wfyh")
+theme_override_font_sizes/font_size = 83
+text = "Adjacent Analysts"
+horizontal_alignment = 1
 
-[node name="Button2" type="Button" parent="." unique_id=1744545170]
-offset_left = 599.0
-offset_top = 257.0
-offset_right = 664.0
-offset_bottom = 288.0
-text = "RAR"
+[node name="Mainmen" type="Sprite2D" parent="." unique_id=92820178]
+z_index = -1
+position = Vector2(400, 300.00003)
+scale = Vector2(10, 10)
+texture = ExtResource("3_sugp2")
+
+[node name="POPUP" type="RichTextLabel" parent="." unique_id=1454948734]
+z_index = 50
+texture_filter = 2
+offset_top = 117.0
+offset_right = 893.1819
+offset_bottom = 387.45456
+scale = Vector2(0.44, 0.44)
+theme_override_colors/default_color = Color(0.65834004, 0.6583399, 0.6583399, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -3
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("2_0wfyh")
+theme_override_fonts/bold_font = ExtResource("4_jyhfs")
+theme_override_font_sizes/normal_font_size = 109
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[color=#5577ff][S][/color] Play as Sidney
+(Completed!)"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="POPUP2" type="RichTextLabel" parent="." unique_id=1238782432]
+z_index = 50
+texture_filter = 2
+offset_left = 393.0
+offset_top = 117.0
+offset_right = 1286.1819
+offset_bottom = 337.45453
+scale = Vector2(0.44, 0.44)
+theme_override_colors/default_color = Color(0.65834004, 0.6583399, 0.6583399, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -3
+theme_override_constants/outline_size = 11
+theme_override_fonts/normal_font = ExtResource("2_0wfyh")
+theme_override_fonts/bold_font = ExtResource("4_jyhfs")
+theme_override_font_sizes/normal_font_size = 109
+theme_override_font_sizes/bold_font_size = 42
+bbcode_enabled = true
+text = "[color=#f23300][R][/color] Play as The Rat
+(Completed!)"
+scroll_active = false
+horizontal_alignment = 1

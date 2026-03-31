@@ -14,3 +14,9 @@ var settings = {
 	MUSIC = false,
 	HINTS = false
 }
+
+func reset():
+	rat_stage = 0
+	rat_stages = ["malic"]
+	cur_rat = 1
+	has_tape_rec = false

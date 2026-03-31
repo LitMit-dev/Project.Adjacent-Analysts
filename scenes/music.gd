@@ -7,18 +7,16 @@ const paths = {
 	
 	###Rat
 	"sewers": "res://assets/rat_case/music/Investigation! Sewers Ver. - B1.wav",
-	"balcony": "",
+	"balcony": "res://assets/rat_case/music/Investigation! Balcony Ver. - B2.wav",
 	"cafe": "res://assets/priest_case/music/Caffeinated Warmth - A2.wav",
-	"bakery": "",
-	"finale": "",
+	"bakery": "res://assets/rat_case/music/Investigation! Bakery!.wav",
 	
 	##Priest
 	"confession": "res://assets/priest_case/music/The Sinners Grace - A1+4.wav",
 	"cafetalk": "res://assets/priest_case/music/Caffeinated Warmth - A2.wav",
 	"interviews": "res://assets/priest_case/music/Thoughts of the Holy Man - A3.wav",
 	"cafe_run": "res://assets/rat_case/music/Investigation! Cafe Ver. - B3.wav",
-	"one_to_one": "",
-	"bakery of sin": "",
+	"bakeryofsin": "res://assets/priest_case/music/The Unjust.wav",
 	"the end": "res://assets/priest_case/music/A Solemn Man - A5.wav",
 }
 
@@ -52,4 +50,4 @@ func set_music_db():
 	volume_db = [-80, 0][int(globdat.settings.MUSIC == true)]
 
 func set_file(stringN):
-	stream = load(paths[stringN])
+	stream = load(stringN)

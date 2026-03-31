@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://by3pi4xdpeio1" path="res://assets/priest_case/bgs/priestcase01.png" id="1_3m13k"]
 [ext_resource type="Script" uid="uid://cbs28omjriu3j" path="res://scenes/animatable_background.gd" id="1_i61e1"]
+[ext_resource type="FontFile" uid="uid://ffaomchs73fp" path="res://assets/fonts/Jersey_10/Jersey10-Regular.ttf" id="3_i61e1"]
 
 [node name="Animatable Background" type="CanvasLayer" unique_id=1750321963]
 script = ExtResource("1_i61e1")
@@ -16,3 +17,11 @@ texture = ExtResource("1_3m13k")
 z_index = -3
 position = Vector2(400.00003, 300.00003)
 scale = Vector2(10, 10)
+
+[node name="Label" type="Label" parent="." unique_id=1725295296]
+offset_right = 97.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("3_i61e1")
+theme_override_font_sizes/font_size = 35
+text = " [M] Music: ON"
+horizontal_alignment = 1

@@ -107,4 +107,6 @@ func play_anim_once(framecount, persec):
 		if active_anim == false:
 			anim_looped.emit()
 			return 2
-	
+
+func _process(delta: float) -> void:
+	$Label.text = [" [M] Music: ON", " [M] Music: OFF"][int(MSC.stream_paused)]

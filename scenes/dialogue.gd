@@ -144,6 +144,10 @@ func _input(event: InputEvent) -> void:
 	if not_active:
 		return
 	if event is InputEventKey and !no_echo:
+		if event.is_action_pressed("menutog"):
+			MSC.stream_paused = !MSC.stream_paused 
+			return
+		
 		no_echo = true
 		
 		if is_choosing and event.is_action("END_SONG"):

@@ -40,8 +40,13 @@ func _ready() -> void:
 	
 	DL.priestify()
 	
+	MSC.volume_db = -2
+	MSC.set_file(MSC.paths.confession)
+	MSC.play()
 	await confessional()
+	MSC.set_file(MSC.paths.caferun)
 	await where_first()
+	MSC.set_file(MSC.paths.interviews)
 	await interviews()
 	await rat_chase()
 	await rat_wait()
@@ -195,7 +200,7 @@ func where_first():
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_name("Father Sidney")
-	DL.swap_dialogue("That's the thing though.")
+	DL.swap_dialogue("That's the thing though,")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("This isn't a random tape recorder. 'Some hoodlum' doesn't just have Raisor's personal one.")
@@ -381,7 +386,7 @@ func interviews():
 		DL.swap_dialogue("Straight west. Back home. Here.")
 		DL.prog_text()
 		await DL.advance_text
-		DL.swap_dialogue("Listened to his cassettes for longer than I want to admit.")
+		DL.swap_dialogue("Listened to his cassettes for longer than I'd like to admit.")
 		DL.prog_text()
 		await DL.advance_text
 		DL.swap_dialogue("Did they ever find his recorder Sid'? In the church or anythin'? It wasn't in his room.")
@@ -979,10 +984,10 @@ func rat_chase():
 	DL.swap_dialogue("M..A..N..Y    T..H..A..N..K")
 	DL.prog_text()
 	await DL.advance_text
+	DL.hide()
 	ANBG.swap_bg(ANBG.bg_index.bakery_door)
 	ANBG.set_anim(ANBG.anim_index.door_flap, 4)
 	await ANBG.play_anim_once(4, 0.72)
-	DL.hide()
 	ANBG.anim_state(false)
 
 func rat_wait():
@@ -1066,7 +1071,7 @@ func rat_wait():
 	DL.swap_dialogue("Family.")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("They can't afford to leave, and a lot of people aren't going to abandon their life.")
+	DL.swap_dialogue("They can't afford to leave. People aren't just going to abandon what they have here.")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("I'd leave if I didn't have the same sort of attachment to this place.")
@@ -1137,13 +1142,11 @@ func rat_wait():
 	DL.swap_dialogue("That's our cue.")
 	DL.prog_text()
 	await DL.advance_text
+	ANBG.end_anim()
+	await ANBG.anim_looped
 	DL.hide()
 	
 func bakery():
-	
-	#ANBG.end_anim()
-	#await ANBG.anim_looped
-	DL.hide()
 	
 	ANBG.swap_bg(ANBG.bg_index.open_door)
 	ANBG.set_anim(ANBG.anim_index.door_open, 3)
@@ -1336,7 +1339,7 @@ func bakery():
 	ANBG.set_anim(ANBG.anim_index.baker_talk, 4)
 	ANBG.loop_anim(4, 0.43)
 	DL.swap_name("Damien")
-	DL.swap_dialogue("I didn't poison him-! I!- That's not!-", true)
+	DL.swap_dialogue("I didn't poison him-! I-! That's not-!", true)
 	await DL.prog_text()
 	
 	ANBG.end_anim()
@@ -1635,7 +1638,7 @@ func bakery():
 	DL.swap_dialogue("And what the hell is that rat doing here?!")
 	DL.prog_text()
 	await DL.advance_text
-	DL.swap_dialogue("I thought I threw it in the sewers!-")
+	DL.swap_dialogue("I thought I threw it in the sewers-!")
 	DL.prog_text()
 	await DL.advance_text
 	
@@ -1768,12 +1771,12 @@ func law_ending():
 	DL.show()
 	
 	DL.swap_name("Sidney")
-	DL.swap_dialogue("Thanks for coming to my last sermon yesterday. All the evidence is in order, yes?")
+	DL.swap_dialogue("Thanks for coming to my last sermon yesterday. All the evidence was in order, yes?")
 	DL.prog_text()
 	await DL.advance_text
 	
 	DL.swap_name("Roman")
-	DL.swap_dialogue("All processed. The trial went well, 10 years.")
+	DL.swap_dialogue("All processed. The trial went... decent. 10 years.")
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_dialogue("The shock on that bailiff's face when we made the rat testify...")
@@ -1830,28 +1833,13 @@ func law_ending():
 	DL.prog_text()
 	await DL.advance_text
 	DL.swap_name("Sidney")
-	DL.swap_dialogue("Well it's a lot better than that boxy apartment you have.")
+	DL.swap_dialogue("Well it's a lot better than that cramped apartment you have.")
 	DL.prog_text()
 	await DL.advance_text
-	
-	#Reg dialogue
-	DL.swap_name("_")
-	DL.swap_dialogue("_")
+	DL.swap_name("Roman")
+	DL.swap_dialogue("Yeah. I'll be glad to go outside that box for the last time.")
 	DL.prog_text()
 	await DL.advance_text
-	
-	#Cut-off dialogue
-	DL.swap_name("_")
-	DL.swap_dialogue("_", true)
-	await DL.prog_text()
-	
-	#newloop	
-	ANBG.end_anim()
-	await ANBG.anim_looped
-	ANBG.swap_bg(ANBG.bg_index.confess2)
-	ANBG.set_anim(ANBG.anim_index.confess2, 3)
-	ANBG.loop_anim(2, 0.43)
-	
 	#END
 	DL.hide()
 	ANBG.anim_state(false)
