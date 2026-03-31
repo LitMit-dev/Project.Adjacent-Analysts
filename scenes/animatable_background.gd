@@ -87,7 +87,11 @@ func end_anim():
 	active_anim = false
 	$ANIM_LAYER.frame = 0
 
+func hide_anim():
+	$ANIM_LAYER.hide()
 
+func unhide_anim():
+	$ANIM_LAYER.show()
 
 func loop_anim(framecount, persec):
 	while active_anim:

@@ -943,7 +943,7 @@ process_mode = 3
 position = Vector2(1001, 33)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Issue #621 - 08.06.06"
+Issue = "Issue #621 - 07.07.06"
 text = "We have confirmation that Minister Raisor, Head of the Kaielan Church has passed away, as of yesterday, due to a heart attack.
 This is a devastating blow to the city. We will be asking Father Sidney on his thoughts on this tragedy."
 color = Color(0.89411765, 0.8745098, 0.8745098, 1)
@@ -970,7 +970,7 @@ process_mode = 3
 position = Vector2(2226, 404)
 script = ExtResource("20_7o785")
 Nodrach_Type = "News"
-Issue = "Issue #212 - 11.07.03"
+Issue = "Issue #212 - 09.10.03"
 text = "After the recent Mayoral Announcement that Sandstone is no longer a safe place to live in, due to the unstable material in the buildings, we report that mass looting and evacuation has  started.
 We encourage you all to leave."
 color = Color(1, 1, 1, 1)

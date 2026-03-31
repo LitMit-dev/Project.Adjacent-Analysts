@@ -4,7 +4,8 @@ extends Node2D
 
 const RAT_DIALOGUE = {
 	
-	"0"=["And the rat climbed, for it had nowhere else to go.", 
+	"0"=["After the rat went Outside The Box, It pursued the surface.",
+		"And the rat climbed, for it had nowhere else to go.", 
 		"Up the pipe, wondering, why it was there in the first place.", 
 		"But the rat felt the importance of the device.", 
 		"It persisted upwards, until a crack of opportunity allowed its freedom." 
@@ -16,17 +17,18 @@ const RAT_DIALOGUE = {
 		],
 	
 	"2"=["The rat was piecing its memory back together little by little. It had remembered why it was put in that box.",
-		"During which, it found success, it found two people who were deeply interested. They wanted to help.", 
-		"The rat may finally return the device, and find home."
+		"During which, it found success, it found two people who were deeply interested. They wanted to help the rat.", 
+		"It thought it may finally return the device, and find home."
 		],
 	
 	"3"=[
 		"Thus, I conclude the story of the rat.", 
 		"In summary.", 
-		"The rat found itself lost, in a box, grasping for any familiarity.", 
+		"The rat found itself lost, in a box, grasping for any familiarity, any place to call home.", 
 		"Yet it had a heart, a heart of which was more caring than most.", 
-		"It had donned the duty of finding the owner of the device, whilst trying to solve the case of its own identity.",
-		"The rat never knew the owner was long gone. It never truly had a home either.",
+		"It had donned the duty of finding the owner of the device.",
+		"Despite that the rat had been hurt by who it thought owned the device, it still wanted to make amends.", 
+		"The rat never knew the true owner was long gone. The rat never truly had a home either.",
 		"Yet, I strive to be the rat. We all, should strive to have its level of courage.", 
 		"And so today marks my final day here in this church.",
 		"Sandstone is like our box, we feel trapped but we can leave at any time.",
